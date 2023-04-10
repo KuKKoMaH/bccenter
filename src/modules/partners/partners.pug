@@ -1,0 +1,14 @@
+.partners
+  .c
+    .partners__title Партнеры
+    .partners__container
+      .partners__main
+        .partners__items
+          each i in ['01', '02', '03', '04', '05', '06','07']
+            .partners__item
+              .partners__card: img(src=require('src/modules/partners/img/partner_' + i + '.png'))
+          .partners__item
+            .partners__card.partners__card--placeholder
+      .partners__aside
+        .partners__head Станьте нашим партнером
+        button.btn.btn--outline Оставить  заявку

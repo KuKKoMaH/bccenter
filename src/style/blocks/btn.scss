@@ -1,0 +1,155 @@
+.btn {
+  $this: &;
+
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 13px 28px;
+  @include title-medium();
+  color: $white;
+  background: $primary;
+  border-radius: 12px;
+  z-index: 1;
+  text-decoration: none;
+  @include anim(.15s);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    background: $black;
+    opacity: 0;
+    @include anim(.15s);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover, .btnContainer:hover & {
+    &:before {
+      opacity: .05;
+    }
+  }
+
+  &:active, .btnContainer:active & {
+    &:before {
+      opacity: .15;
+    }
+  }
+
+  //&:focus-within, .btnContainer:focus-within {
+  //  &:before {
+  //    opacity: .1;
+  //  }
+  //}
+
+  &:disabled {
+    background: $secondary400;
+    cursor: not-allowed;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: $black;
+    border: 1px solid $black;
+    padding: 12px 27px;
+
+    &:disabled {
+      background: transparent;
+      color: $secondary400;
+      border-color: $secondary400;
+    }
+  }
+
+  &--outline-white {
+    background: transparent;
+    color: $white;
+    border: 1px solid $white;
+    padding: 12px 27px;
+
+    &:before {
+      background: $secondary200;
+    }
+
+    &:disabled {
+      background: transparent;
+      color: $secondary500;
+      border-color: $secondary500;
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-left: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.link {
+  @include title-medium();
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  color: $black;
+  @include anim();
+
+  &:hover {
+    color: mix($primary, #000, 40);
+  }
+
+  &:active {
+    color: $primary;
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-left: 8px;
+    color: $primary;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.linkWhite {
+  @include title-medium();
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  @include link-white();
+}

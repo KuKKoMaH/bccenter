@@ -1,0 +1,25 @@
+.clients
+  .clients__head
+    .clients__title Нам доверяют
+    .clients__aside
+      a.link(href='#')
+        span Все клиенты
+        +the_svg('arrow')
+
+  .clients__slider
+    .clients__slides
+      .clients__row
+        each i in ['01', '02', '03', '04', '05', '06','07', '08', '09', '10', '11', '12', '13', '14']
+          .clients__slide: img(src=require('src/modules/clients/img/client_' + i + '.png'))
+        each i in ['01', '02', '03', '04', '05', '06','07', '08', '09', '10', '11', '12', '13', '14']
+          .clients__slide: img(src=require('src/modules/clients/img/client_' + i + '.png'))
+      .clients__row
+        each i in ['14', '13', '12', '11', '10', '09', '08', '07', '06', '05', '04', '03', '02', '01']
+          .clients__slide: img(src=require('src/modules/clients/img/client_' + i + '.png'))
+        each i in ['14', '13', '12', '11', '10', '09', '08', '07', '06', '05', '04', '03', '02', '01']
+          .clients__slide: img(src=require('src/modules/clients/img/client_' + i + '.png'))
+
+  .clients__action
+    a.btn.btn--outline(href='#')
+      span Все клиенты
+      +the_svg('arrow')

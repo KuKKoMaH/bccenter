@@ -1,0 +1,52 @@
+// ====================================
+// colors
+// ====================================
+
+$primary: #FF0037;
+
+$black: #151519;
+$white: #FFFFFF;
+
+$secondary100: #FFFFFF;
+$secondary200: #F1F1FA;
+$secondary300: #E1E1EF;
+$secondary400: #D6D6E5;
+$secondary500: #C8C8D9;
+$secondary600: #6E6E80;
+$secondary700: #575766;
+$secondary800: #41414D;
+$secondary900: #151519;
+
+$neutral100: #FFFFFF;
+$neutral200: #F8F8FA;
+$neutral300: #F1F1F5;
+$neutral400: #E6E6ED;
+$neutral500: #C2C2C9;
+$neutral600: #94949C;
+$neutral700: #6D6D75;
+$neutral800: #44444C;
+$neutral900: #1A1A1D;
+
+$info: #2D90EB;
+$success: #27AE60;
+$warning: #FCCE2D;
+$error: #F83D3D;
+
+$sbg: #036E78;
+
+// ====================================
+// grid settings
+// ====================================
+$gutter: 15px;
+$gutter-half: ($gutter / 2);
+
+//$breakpoint-sm: 468px
+//$breakpoint-lg: 798px;
+$breakpoint-md: 870px;
+
+//$container-sm: 468px
+//$container-md: 768px;
+$container-lg: 1360px;
+$container-sm: 500px;
+
+$header_height: 60px;

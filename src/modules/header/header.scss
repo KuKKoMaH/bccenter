@@ -1,0 +1,484 @@
+.header {
+  $this: &;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #151519;
+  padding: 32px 0 24px;
+  color: $white;
+  @include mobile() {
+    padding: 0;
+
+  }
+
+  &--menu {
+    #{$this} {
+      &__top {
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      &__menu-button {
+        .active {
+          @include hidden();
+        }
+
+        .inactive {
+          @include visible();
+        }
+      }
+
+      &__mobile {
+        @include visible();
+
+        .c {
+          transform: none;
+        }
+      }
+    }
+  }
+
+  &--search {
+    #{$this} {
+      &__search-button {
+        .active {
+          @include hidden();
+        }
+
+        .inactive {
+          @include visible();
+        }
+      }
+
+      &__search {
+        @include visible();
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    @include mobile() {
+      height: 80px;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        max-width: $container-sm;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        background: rgba(#D9D9D9, .3);
+        z-index: 1;
+        @include anim();
+      }
+    }
+  }
+
+  &__logo {
+    img {
+      display: block;
+      @include mobile() {
+        max-width: 170px;
+      }
+    }
+  }
+
+  &__aside {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    @include mobile() {
+      display: none;
+    }
+
+    > * {
+      margin-left: 32px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &--desktop {
+      @include mobile() {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+      @include mobile() {
+        display: flex;
+      }
+    }
+  }
+
+  &__phone {
+    @include title-large();
+  }
+
+  &__search-button {
+    @include link-white();
+    position: relative;
+    width: 24px;
+    height: 24px;
+
+    > * {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .active, .inactive {
+      @include anim();
+    }
+
+    .inactive {
+      @include hidden();
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__menu-button {
+    @include link-white();
+    width: 32px;
+    height: 32px;
+    position: relative;
+
+    > * {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .active, .inactive {
+      @include anim();
+    }
+
+    .inactive {
+      @include hidden();
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__top-menu {
+    margin-top: 32px;
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &__menu {
+    ul, li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    ul {
+      margin: -12px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    li {
+      padding: 12px;
+      flex-shrink: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    a {
+      display: block;
+      position: relative;
+      @include title-medium();
+      @include link-white();
+    }
+
+    .active a {
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 1px;
+        background: $primary;
+        width: 100%;
+      }
+    }
+  }
+
+  &__bottom-menu {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(#D9D9D9, .4);
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &__search {
+    position: absolute;
+    background: #0D0D0F;
+    left: 0;
+    width: 100%;
+    top: 100px;
+    height: calc(100% - 100px);
+    @include hidden();
+    @include anim(.2s);
+    z-index: 1;
+    @include mobile() {
+      top: 80px;
+      height: calc(100% - 80px);
+    }
+
+    .c {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &--active {
+      #{$this} {
+        &__search-clear {
+          @include visible();
+        }
+
+        &__search-suggests {
+          position: absolute;
+          @include hidden();
+        }
+
+        &__search-results {
+          position: static;
+          @include visible();
+        }
+      }
+    }
+  }
+
+  &__search-input {
+    position: relative;
+
+    input {
+      display: block;
+      width: 100%;
+      background: $white;
+      border-radius: 8px;
+      padding: 10px 40px;
+      color: $black;
+      @include label-large();
+
+      :empty + svg {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__search-icon, &__search-clear {
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      color: $secondary700;
+    }
+  }
+
+  &__search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__search-clear {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include hidden();
+    @include anim();
+  }
+
+  &__search-content {
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    @include overflow();
+    overflow-x: hidden;
+  }
+
+  &__search-suggests {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px -8px;
+    opacity: .6;
+    @include anim();
+
+    > * {
+      padding: 12px 8px;
+      @include title-medium();
+      @include link-white();
+    }
+  }
+
+  &__search-results {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    @include anim();
+    @include hidden();
+
+    > * {
+      @include title-large();
+      @include mobile() {
+        @include title-medium();
+      }
+      margin-top: 16px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__mobile {
+    display: none;
+    @include mobile() {
+      display: block;
+      position: absolute;
+      padding: 32px 0;
+      left: 0;
+      top: 80px;
+      width: 100%;
+      height: calc(100% - 80px);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #151519;
+      @include overflow();
+      @include hidden();
+      @include anim(.2s);
+      z-index: 1;
+
+      .c {
+        transform: translateY(-10px);
+        @include anim();
+      }
+    }
+  }
+
+  &__mobilemenu {
+    ul, li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin-top: 32px;
+      position: relative;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    > ul > li {
+
+      &.active {
+        #{$this} {
+          &__expand {
+            transform: rotate(0);
+          }
+
+          &__submenu {
+            max-height: none;
+          }
+        }
+
+      }
+    }
+
+    a {
+      @include title-large();
+      @include link-white();
+    }
+  }
+
+  &__submenu {
+    max-height: 0;
+    overflow: hidden;
+    @include anim(.25s);
+
+    ul {
+      border-radius: 8px;
+      background: $neutral700;
+      margin-top: 32px;
+      padding: 16px;
+
+      > li {
+
+      }
+    }
+  }
+
+
+  &__expand {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    transform: rotate(180deg);
+    @include link-white();
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__contacts {
+    border-top: 1px solid rgba(#D9D9D9, .3);
+    margin-top: 32px;
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      @include link-white();
+    }
+
+    > * {
+      margin-top: 24px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

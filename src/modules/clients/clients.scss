@@ -1,0 +1,77 @@
+.clients {
+  $this: &;
+
+  @include block-margin();
+
+  &__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+    @include mobile() {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__title {
+    @include display-medium();
+    margin-right: auto;
+    @include mobile() {
+      @include headline-large();
+    }
+  }
+
+  &__aside {
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &__slider {
+    margin-top: 24px;
+    @include full-width();
+    @include mobile() {
+      margin-top: 12px;
+    }
+  }
+
+  &__slides {
+    transition-timing-function: linear;
+    animation: scroll 40s linear infinite;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__slide {
+    padding: 0 12px;
+    @include mobile() {
+      padding: 0 6px;
+    }
+
+    img {
+      display: block;
+      @include mobile() {
+        max-height: 50px;
+        width: auto;
+      }
+    }
+  }
+
+  &__action {
+    display: none;
+    @include mobile() {
+      display: block;
+      margin-top: 32px;
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%)
+    }
+  }
+}

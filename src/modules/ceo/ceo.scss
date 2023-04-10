@@ -1,0 +1,100 @@
+.ceo {
+  $this: &;
+
+  @include block-margin();
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-right: 52px;
+    flex-shrink: 0;
+    @include mobile() {
+      margin: 0 auto 20px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    @include display-medium();
+    color: #000;
+    @include mobile() {
+      @include headline-large();
+    }
+  }
+
+  &__position {
+    @include headline-medium();
+    margin-top: 12px;
+    color: $neutral700;
+    @include mobile() {
+      @include headline-small();
+    }
+  }
+
+  &__description {
+    @include headline-medium();
+    margin-top: 48px;
+    @include mobile() {
+      @include title-large();
+      margin-top: 32px;
+    }
+  }
+
+  &__numbers {
+    margin-top: 48px;
+    @include mobile() {
+      margin-top: 32px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    @include mobile() {
+      margin-top: 10px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__number {
+    width: 80px;
+    color: $primary;
+    @include headline-medium();
+    margin-right: 10px;
+    flex-shrink: 0;
+    @include mobile() {
+      @include body-extra-large();
+    }
+  }
+
+  &__text {
+    @include body-extra-large();
+    margin-top: 3px;
+    @include mobile() {
+      @include title-large();
+      margin-top: -1px;
+    }
+  }
+
+  &__action {
+    margin-top: 48px;
+    @include mobile() {
+      margin-top: 32px;
+    }
+  }
+}

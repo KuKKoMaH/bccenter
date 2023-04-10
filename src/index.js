@@ -1,0 +1,20 @@
+import 'jquery';
+import 'selectize';
+import './js/scriptLoader';
+import './js/breakpoints';
+import './js/init';
+import './js/initGallery';
+import './js/initMap';
+import './style';
+import './sprites';
+
+import './modules/header/header.js';
+import './modules/footer/footer.js';
+import './modules/head/head.js';
+import './modules/welcome/welcome.js';
+import './modules/ceo/ceo.js';
+import './modules/directions/directions.js';
+import './modules/map/map.js';
+import './modules/clients/clients.js';
+import './modules/partners/partners.js';
+import './modules/banner/banner.js';

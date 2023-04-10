@@ -1,0 +1,22 @@
+mixin the_svg(svgIcon, fileName)
+  svg&attributes(attributes)
+    use(xlink:href=`img/${fileName ? fileName + '.sprite' : 'sprite'}.svg#` + svgIcon + '-usage')
+
+mixin popup(id)
+  .popup.micromodal-slide(id=id aria-hidden="true")
+    .popup__overlay(tabindex="-1" data-micromodal-close)
+      .popup__container(role="dialog" aria-modal="true")
+        button.popup__close(data-micromodal-close): +the_svg('x')
+        if block
+          block
+
+mixin form()
+  .form
+    .form__content
+      if block
+        block
+    .form__overlay
+      .form__icon: +the_svg('success')
+      .form__title Ваша заявка #[br]успешно отправлена!
+      .form__text В ближайшее время с Вами свяжется наш менеджер.
+

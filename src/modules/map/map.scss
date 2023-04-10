@@ -1,0 +1,128 @@
+.map {
+  $this: &;
+
+  position: relative;
+  background: $black;
+  @include full-width();
+  color: $white;
+  padding: 63px 0;
+  @include mobile() {
+    padding: 48px 0;
+  }
+
+  .c {
+    position: relative;
+  }
+
+  &__title {
+    @include display-medium();
+    @include mobile() {
+      @include headline-large();
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__items {
+    margin-top: 48px;
+    max-width: 320px;
+    @include mobile() {
+      margin-top: 16px;
+    }
+  }
+
+  &__item {
+    height: 188px;
+    padding: 32px 0;
+    border-bottom: 1px solid rgba($white, .5);
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  &__head {
+    @include headline-large();
+    color: $primary;
+  }
+
+  &__text {
+    @include headline-small();
+    margin-top: 24px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 346px;
+    margin-top: -18px;
+    @include mobile() {
+      position: relative;
+      top: 0;
+      transform: none;
+      left: 0;
+      margin: 16px 0 0 0;
+      height: 235px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 20px;
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+      }
+
+      &:before {
+        top: 0;
+        height: 69px;
+        background: linear-gradient(180deg, #151519 13.77%, rgba(21, 21, 25, 0) 100%);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        background: $black;
+        height: 80px;
+      }
+    }
+
+    img {
+      display: block;
+      @include mobile() {
+        height: 250px;
+        width: auto;
+      }
+    }
+  }
+
+  &__count {
+    position: absolute;
+    top: 174px;
+    left: 601px;
+    @include title-extra-large();
+    text-align: center;
+    @include mobile() {
+      top: 45px;
+      left: 243px;
+      @include title-medium();
+    }
+  }
+
+  &__number {
+    margin-bottom: 2px;
+    font-size: 96px;
+    line-height: 111px;
+    font-weight: 800;
+    letter-spacing: .2px;
+    color: $primary;
+    @include mobile() {
+      font-size: 40px;
+      line-height: 54px;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.header
+  .c
+    .header__top
+      .header__logo
+        a(href='#'): img(src=require('src/img/logo_full.svg'))
+      .header__aside.header__aside--desktop
+        a.header__phone(href='tel:+7 (967) 445-01-31') +7 (967) 445-01-31
+        button.header__search-button
+          .active: +the_svg('search')
+          .inactive: +the_svg('X')
+        button.btn.btn--outline-white Заявка
+      .header__aside.header__aside--mobile
+        button.header__search-button
+          .active: +the_svg('search')
+          .inactive: +the_svg('X')
+        button.header__menu-button
+          .active: +the_svg('menu')
+          .inactive: +the_svg('X')
+    .header__top-menu
+      .header__menu
+        ul
+          li: a(href='#') О компании
+          li.active: a(href='#') Организациям
+          li: a(href='#') Соискателям
+          li: a(href='#') Вакансии
+          li: a(href='#') Цифровая платформа SBG
+          li: a(href='#') Новости
+
+    .header__bottom-menu
+      .header__menu
+        ul
+          li: a(href='#') Аудит
+          li: a(href='#') Стратегия
+          li: a(href='#') Оргменеджмент
+          li: a(href='#') Подбор
+          li: a(href='#') Адаптация
+          li: a(href='#') Обучение
+          li: a(href='#') Эффективность
+          li: a(href='#') Оценка
+          li: a(href='#') Таланты
+          li: a(href='#') HR-бренд
+
+    .header__search
+      .c
+        .header__search-input
+          .header__search-icon: +the_svg('search')
+          input(placeholder='Начните вводить...')
+          button.header__search-clear: +the_svg('X')
+        .header__search-content
+          .header__search-suggests
+            button Аудит процессов
+            button Формирование стратегии
+            button Организационный менеджмент
+            button Подбор
+            button Адаптация
+            button Управление эффективностью
+            button Обучение и развитие
+          .header__search-results
+            a(href='#') Обучение и развитие
+            a(href='#') Организационный менеджмент
+            a(href='#') Оценка эффективности и потенциала
+            a(href='#') Обучение и развитие
+            a(href='#') Организационный менеджмент
+            a(href='#') Оценка эффективности и потенциала
+            a(href='#') Обучение и развитие
+            a(href='#') Организационный менеджмент
+            a(href='#') Оценка эффективности и потенциала
+
+    .header__mobile
+      .c
+        .header__mobilemenu
+          ul
+            li: a(href='#') О компании
+            li
+              a(href='#') Организациям
+              button.header__expand: +the_svg('chevron')
+              .header__submenu
+                ul
+                  li: a(href='#') Аудит
+                  li: a(href='#') Стратегия
+                  li: a(href='#') Оргменеджмент
+                  li: a(href='#') Подбор
+                  li: a(href='#') Адаптация
+                  li: a(href='#') Обучение
+                  li: a(href='#') Эффективность
+                  li: a(href='#') Оценка
+                  li: a(href='#') Таланты
+                  li: a(href='#') HR-бренд
+
+            li: a(href='#') Соискателям
+            li: a(href='#') Вакансии
+            li: a(href='#') Цифровая платформа SBG
+            li: a(href='#') Новости
+
+        .header__contacts
+          a(href='tel:+7 (967) 445-01-31') +7 (967) 445-01-31
+          a(href='mailto:office@bc-center.ru') office@bc-center.ru

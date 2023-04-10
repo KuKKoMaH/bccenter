@@ -1,0 +1,148 @@
+.footer {
+  $this: &;
+  margin-top: auto;
+  background: $black;
+  padding: 48px 0;
+  border-radius: 16px 16px 0 0;
+  color: $white;
+  @include mobile() {
+    padding: 32px 0;
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    @include mobile() {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__menu {
+    opacity: .7;
+    @include mobile() {
+      margin-top: 32px;
+      border-top: 1px solid rgba(#D9D9D9, .3);
+      padding-top: 32px;
+      width: 100%;
+    }
+
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -12px;
+      @include mobile() {
+        flex-direction: column;
+
+      }
+    }
+
+    li {
+      margin: 12px;
+      flex-shrink: 0;
+    }
+
+    a {
+      @include title-medium();
+      @include link-white();
+    }
+  }
+
+  &__aside {
+    margin-left: auto;
+    flex-shrink: 0;
+    padding-left: 24px;
+    @include mobile() {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -4px -12px;
+    @include mobile() {
+      flex-direction: column;
+    }
+
+    > * {
+      margin: 4px 12px;
+      flex-shrink: 0;
+    }
+
+    a {
+      @include title-medium();
+      @include link-white();
+      @include mobile() {
+        @include title-large();
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 32px;
+    border-top: 1px solid rgba(#D9D9D9, .3);
+    padding-top: 32px;
+    display: flex;
+    align-items: center;
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    opacity: .45;
+
+    img {
+      display: block;
+    }
+
+    @include mobile() {
+      width: 100%;
+      margin-bottom: 48px;
+    }
+  }
+
+  &__legals {
+    opacity: .4;
+
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -8px -12px;
+    }
+
+    li {
+      margin: 8px 12px;
+      flex-shrink: 0;
+    }
+
+    a {
+      @include body-small();
+      @include link-white();
+    }
+  }
+
+  &__copyright {
+    @include body-small();
+    margin-top: 8px;
+    text-align: right;
+    opacity: .4;
+    @include mobile() {
+      text-align: left;
+      margin-top: 16px;
+    }
+  }
+}
