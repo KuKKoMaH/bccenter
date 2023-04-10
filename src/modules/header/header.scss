@@ -248,7 +248,7 @@
     height: calc(100% - 100px);
     @include hidden();
     @include anim(.2s);
-    z-index: 1;
+    z-index: 5;
     @include mobile() {
       top: 80px;
       height: calc(100% - 80px);
@@ -381,7 +381,7 @@
       @include overflow();
       @include hidden();
       @include anim(.2s);
-      z-index: 1;
+      z-index: 5;
 
       .c {
         transform: translateY(-10px);
