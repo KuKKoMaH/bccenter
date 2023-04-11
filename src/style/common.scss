@@ -97,3 +97,53 @@ img[data-srcset] {
     margin-bottom: 0;
   }
 }
+
+.block {
+  @include block-margin();
+
+  &__head {
+    margin-bottom: 48px;
+    @include mobile() {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__title {
+    @include display-medium();
+    @include mobile() {
+      @include headline-large();
+    }
+  }
+
+  &__items {
+    display: flex;
+    margin: -10px;
+    flex-wrap: wrap;
+    @include mobile() {
+      .block__item {
+        width: 100%;
+      }
+      margin: 0;
+    }
+  }
+
+  &__item {
+    padding: 10px;
+    @include mobile() {
+      padding: 10px 0 0 0;
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__action {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mobile() {
+      margin-top: 32px;
+    }
+  }
+}

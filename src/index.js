@@ -18,3 +18,7 @@ import './modules/map/map.js';
 import './modules/clients/clients.js';
 import './modules/partners/partners.js';
 import './modules/banner/banner.js';
+import './modules/cards/cards.js';
+import './modules/services/services.js';
+import './modules/steps/steps.js';
+import './modules/faq/faq.js';

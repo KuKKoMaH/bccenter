@@ -92,6 +92,13 @@
   }
 }
 
+@mixin block-padding() {
+  padding: 80px 0;
+  @include mobile() {
+    padding: 48px 0;
+  }
+}
+
 // ======================
 // typography
 // ======================

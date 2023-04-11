@@ -31,3 +31,7 @@ import './modules/map/map.scss';
 import './modules/clients/clients.scss';
 import './modules/partners/partners.scss';
 import './modules/banner/banner.scss';
+import './modules/cards/cards.scss';
+import './modules/services/services.scss';
+import './modules/steps/steps.scss';
+import './modules/faq/faq.scss';

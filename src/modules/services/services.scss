@@ -1,0 +1,69 @@
+.services {
+  $this: &;
+
+  background: $neutral100;
+  @include full-width();
+  @include block-padding();
+
+  &__item {
+    width: 50%;
+  }
+
+  &__link {
+    height: 100%;
+    color: $white;
+    background: $primary;
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mobile() {
+      padding: 24px;
+    }
+
+    svg {
+      margin-left: 16px;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__text {
+    @include headline-large();
+    @include mobile() {
+      @include headline-small();
+    }
+  }
+
+  &__card {
+    height: 100%;
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    @include elevation-02();
+    --card-background: var(--background, transparent);
+    background: radial-gradient(96.13% 105.4% at 0% 0%, #F8F8FA 0%, rgba(248, 248, 250, 0) 100%), var(--card-background), #F8F8FA;
+    @include mobile() {
+      height: auto;
+      margin-top: 10px;
+      padding: 24px;
+      background: radial-gradient(96.13% 105.4% at 0% 0%, #F8F8FA 0%, rgba(248, 248, 250, 0) 100%), var(--card-background), #F8F8FA;
+
+      #{$this}__text {
+        @include headline-medium();
+      }
+    }
+  }
+
+  &__action {
+    margin-right: auto;
+    padding-top: 36px;
+    @include mobile() {
+      padding-top: 24px;
+    }
+  }
+
+}

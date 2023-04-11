@@ -1,0 +1,19 @@
+.services
+  .c
+    .block__head
+      .block__title Услуги
+    .block__items
+      each i in ['Аудит процессов', 'Формирование стратегии', 'Организационный менеджмент', 'Управление мотивацией и эффективностью', 'Адаптация', 'Подбор', 'Обучение и развитие', 'Управление талантами', 'Оценка эффективности и потенциала', 'HR-бренд<br/>Корпоративная культура']
+        .block__item.services__item
+          a.services__link(href='#')
+            .services__text !{i}
+            +the_svg('arrow')
+      .block__item.services__item
+        .services__card
+          .services__text Заинтересовали#[br]услуги?
+          .services__action: button.btn Узнай подробнее
+      .block__item.services__item(style='--background: url(' + require('src/img/pattern_01.png') + ')')
+        .services__card
+          .services__text Пройди расширенную диагностику HR-процессов своей компании
+          .services__action: button.btn Пройти диагностику
+

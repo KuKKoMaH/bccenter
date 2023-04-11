@@ -1,0 +1,54 @@
+.steps {
+  $this: &;
+
+  &__item {
+    width: 50%;
+  }
+
+  &__card {
+    height: 100%;
+    padding: 48px;
+    border-radius: 16px;
+    @include elevation-01();
+    --card-background: var(--background, transparent);
+    background: radial-gradient(96.13% 105.4% at 0% 0%, #F8F8FA 0%, rgba(248, 248, 250, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    , var(--card-background), #FFFFFF;
+
+    @include mobile() {
+      padding: 24px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    color: $primary;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    @include mobile() {
+      margin-bottom: 12px;
+
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+
+    svg {
+      margin-left: 24px;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__count {
+    @include title-extra-large();
+  }
+
+  &__text {
+    @include headline-large();
+    @include mobile() {
+      @include headline-small();
+    }
+  }
+}

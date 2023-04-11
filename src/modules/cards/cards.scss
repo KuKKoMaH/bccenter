@@ -1,0 +1,80 @@
+.cards {
+  $this: &;
+
+  &__item {
+    width: 33.3333%;
+  }
+
+  &__card {
+    height: 100%;
+    @include elevation-02();
+    background: $neutral100;
+    padding: 32px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    @include mobile() {
+      padding: 16px;
+      flex-direction: row;
+      align-items: center;
+    }
+
+  }
+
+  &__highlight {
+    height: 100%;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border-radius: 16px;
+    background: radial-gradient(96.13% 105.4% at 0% 0%, rgba(204, 0, 45, 0) 0%, #CC002D 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    , linear-gradient(0deg, #FF0037, #FF0037), #FF0037;
+    @include mobile() {
+      height: auto;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+
+    #{$this} {
+      &__text {
+        @include headline-large();
+        @include mobile() {
+          @include headline-medium();
+        }
+      }
+    }
+  }
+
+  &__icon {
+    margin-bottom: 24px;
+    @include mobile() {
+      margin: 0 16px 0 0;
+    }
+
+    img {
+      display: block;
+      max-height: 76px;
+      width: auto;
+      height: auto;
+      @include mobile() {
+        max-width: 48px;
+      }
+    }
+  }
+
+  &__text {
+    @include headline-medium();
+    @include mobile() {
+      @include title-large();
+    }
+  }
+
+  &__action {
+    padding-top: 32px;
+    margin-top: auto;
+    @include mobile() {
+      padding-top: 24px;
+    }
+  }
+}

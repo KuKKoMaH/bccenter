@@ -1,0 +1,71 @@
+.faq {
+  $this: &;
+
+  &__item {
+    border-bottom: 1px solid #D9D9D9;
+
+    &--active {
+      #{$this} {
+
+        &__head {
+          //border-bottom: 2px solid $blue;
+          &:after {
+            transform: none;
+          }
+        }
+
+        &__body {
+          max-height: none;
+        }
+      }
+    }
+  }
+
+  &__head {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 24px 48px 24px 0;
+    @include headline-medium();
+    @include mobile() {
+      @include headline-small();
+    }
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 3px;
+      background: $primary;
+      border-radius: 4px;
+      right: 4px;
+      top: 50%;
+      margin-top: -9px;
+      transform-origin: 50% 50%;
+    }
+
+    &:before {
+    }
+
+    &:after {
+      transform: rotate(90deg);
+      @include anim();
+    }
+  }
+
+  &__body {
+    max-height: 0;
+    overflow: hidden;
+    @include anim(.2s);
+  }
+
+  &__content {
+    padding-top: 10px;
+    padding-bottom: 34px;
+    @include title-large();
+    @include mobile() {
+      @include title-medium();
+    }
+  }
+}
