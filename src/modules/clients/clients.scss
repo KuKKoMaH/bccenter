@@ -1,18 +1,6 @@
 .clients {
   $this: &;
 
-  &__head {
-    display: flex;
-    align-items: center;
-  }
-
-  &__aside {
-    margin-left: auto;
-    @include mobile() {
-      display: none;
-    }
-  }
-
   &__slider {
     margin-top: 24px;
     @include full-width();

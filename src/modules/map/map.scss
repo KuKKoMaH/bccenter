@@ -20,6 +20,7 @@
       @include headline-large();
       position: relative;
       z-index: 1;
+      margin-bottom: -16px;
     }
   }
 
@@ -55,18 +56,27 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    width: 1337px;
+    height: 640px;
     left: 346px;
     margin-top: -18px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
     @include mobile() {
       position: relative;
       top: 0;
       transform: none;
       left: 0;
-      margin: 16px 0 0 0;
+      width: 100%;
       height: 235px;
       display: flex;
       align-items: flex-end;
-      padding-bottom: 20px;
+      margin: 0;
 
       &:before, &:after {
         content: '';
@@ -87,7 +97,7 @@
         position: absolute;
         bottom: 100%;
         background: $black;
-        height: 80px;
+        height: 60px;
       }
     }
 
@@ -96,6 +106,58 @@
       @include mobile() {
         height: 250px;
         width: auto;
+      }
+    }
+  }
+
+  &__regions {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__region {
+    position: absolute;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      @include anim();
+      color: transparent;
+    }
+
+    span {
+      position: absolute;
+      @include label-medium();
+      color: $black;
+      padding: 4px 8px;
+      background: $white;
+      border-radius: 4px;
+      white-space: nowrap;
+      bottom: 100%;
+      margin-bottom: 16px;
+      left: -10px;
+      @include hidden();
+      @include anim();
+      transform: translateY(5px);
+    }
+
+    &:hover {
+      z-index: 1;
+
+      svg {
+        color: $white;
+        transform: translateY(-5px);
+      }
+
+      span {
+        @include visible();
+        transform: none;
       }
     }
   }

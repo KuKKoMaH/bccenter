@@ -4,10 +4,10 @@
   .block__items
     each i in ['Нет персонала', 'Персонал на знает, что и как делать', 'Нет системы управления и отчетности', 'Сотрудники работают не эффективно, без желания', 'Хочешь быть лучшим работодателем', 'Высокие расходы на персонал', 'Не знаешь, как оценить и выделить лучших в команде', 'Как удержать<br/>лучших']
       .block__item.cards__item
-        .cards__card
-          .cards__icon: img(src='https://placehold.jp/76x76.png')
-          .cards__text !{i}
+        .cards__card.cards__card--gray
+          .cards__img: img(src='https://placehold.jp/76x76.png')
+          .cards__head !{i}
     .block__item.cards__item
       .cards__highlight
-        .cards__text Изучим и поможем решить проблемы
+        .cards__head Изучим и поможем решить проблемы
         .cards__action: button.btn.btn--outline-white Пройти опрос

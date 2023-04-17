@@ -1,45 +1,57 @@
-//.notFound {
-//  $this: &;
-//
-//  flex: 1;
-//  display: flex;
-//  align-items: center;
-//  justify-content: center;
-//  padding: 60px 0;
-//
-//  &__content {
-//    max-width: 640px;
-//    padding: 0 20px;
-//    display: flex;
-//    flex-direction: column;
-//    text-align: center;
-//  }
-//
-//  &__head {
-//    font-size: 210px;
-//    line-height: 1;
-//    font-weight: 600;
-//    color: $red;
-//    @include mobile() {
-//      font-size: 130px;
-//    }
-//  }
-//
-//  &__title {
-//    font-size: 40px;
-//    font-weight: 600;
-//    color: $red;
-//    @include mobile() {
-//      font-size: 24px;
-//    }
-//  }
-//
-//  &__subtitle {
-//    margin: 45px 0 60px;
-//    font-size: 24px;
-//    font-weight: 500;
-//    @include mobile() {
-//      font-size: 20px;
-//    }
-//  }
-//}
+.notFound {
+  $this: &;
+
+  flex: 1;
+  background: url(../../img/pattern_02.png) rgba(#000, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  @include block-padding();
+
+  &__container {
+    display: flex;
+    min-height: 229px;
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  &__head {
+    font-weight: 800;
+    font-size: 235.2px;
+    line-height: 147px;
+    align-self: center;
+    @include mobile() {
+      font-size: 128px;
+      line-height: 175px;
+    }
+  }
+
+  &__content {
+    border-left: 1px solid $white;
+    margin-left: 46px;
+    padding-left: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include mobile() {
+      border-left: 0;
+      border-top: 1px solid $white;
+      margin: 24px 0 0 0;
+      padding: 24px 0 0 0;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    @include display-medium();
+    @include mobile() {
+      @include headline-medium();
+    }
+  }
+
+  &__action {
+    margin-top: 32px;
+  }
+}

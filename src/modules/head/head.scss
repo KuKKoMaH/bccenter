@@ -1,112 +1,58 @@
 .head {
   $this: &;
-  background: $black;
-  color: $white;
-  padding: 80px 0;
-  background-size: cover;
-  background-position: 50% 50%;
-  border-radius: 0px 0px 16px 16px;
+
+  background: $neutral100;
   @include full-width();
-  @include mobile() {
-    padding: 48px 0;
-  }
+  padding-top: 40px;
 
-  &--white {
-    color: $black;
-    background-color: $neutral300;
-  }
-
-  &--main {
-    #{$this} {
-      &__title {
-        max-width: 820px;
-        @include display-large();
-        @include mobile() {
-          @include headline-extra-large();
-        }
-      }
-    }
-  }
-
-  &--sbg {
-    .c {
-      display: flex;
-      align-items: flex-start;
-      @include mobile() {
-        flex-direction: column-reverse;
-      }
-    }
-
-    #{$this} {
-      &__title {
-        max-width: 974px;
-      }
-    }
-  }
-
-  &--news {
-    padding-top: 40px;
+  &__breadcrumbs {
+    margin-bottom: 32px;
     @include mobile() {
-      padding: 54px 0;
-    }
-
-    #{$this} {
-      &__title {
-        @include display-small();
-        @include mobile() {
-          @include headline-medium();
-        }
-      }
+      margin-bottom: 16px;
     }
   }
 
-  &__main {
-    flex: 1;
+  &__head {
+    display: flex;
+    align-items: center;
+    @include mobile() {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__title {
-    max-width: 763px;
+    margin-right: auto;
     @include display-medium();
-    @include mobile() {
-      @include headline-large();
-    }
-  }
-
-  &__category {
-    @include headline-medium();
-    margin-bottom: 32px;
-    @include mobile() {
-      margin-bottom: 24px;
-    }
-  }
-
-  &__date {
-    @include label-large();
-    margin-bottom: 4px;
-    opacity: .5;
-  }
-
-  &__subtitle {
-    @include headline-medium();
-    margin-top: 16px;
-    @include mobile() {
-      @include title-medium();
-    }
-  }
-
-  &__action {
-    margin-top: 48px;
-    @include mobile() {
-      margin-top: 32px;
-    }
   }
 
   &__aside {
-    margin-left: auto;
-    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    @include label-large();
+    color: $secondary700;
     @include mobile() {
-      padding-left: 0;
-      margin: 0 0 16px 0;
+      margin-top: 16px;
+    }
+  }
+
+  &__filter {
+    margin-top: 32px;
+    display: flex;
+    @include mobile() {
+      margin: 16px -16px 0 -16px;
+      padding: 0 16px;
+      @include overflow();
+    }
+
+    > * {
+      margin-left: 8px;
+      flex-shrink: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
 }
+

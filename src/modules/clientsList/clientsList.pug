@@ -1,0 +1,11 @@
+.clientsList.block
+  .block__head
+    .block__title Клиенты
+  .clientsList__items
+    each i in ['01', '02', '03', '04', '05', '06','07', '08', '09', '10', '11', '12', '13', '14']
+      .clientsList__item
+        .clientsList__card: img(src=require('src/modules/clients/img/client_' + i + '.png'))
+  .clientsList__items.clientsList__items--sm
+    each i in ['01', '02', '03', '04', '05', '06','07', '08', '09', '10', '11', '12', '13', '14']
+      .clientsList__item
+        .clientsList__card: img(src=require('src/modules/clients/img/client_' + i + '.png'))

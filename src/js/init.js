@@ -21,22 +21,15 @@ document.querySelectorAll('input[type="tel"]').forEach(el => {
 
 // $('input[type="tel"]').mask("+7 (999) 999-99-99");
 
-$('.select').selectize({
-  // render: {
-  //   item:   function (data, escape) {
-  //     const field_label = this.settings.labelField;
-  //     let content = escape(data[field_label]);
-  //     if (data.color) content += `&nbsp;<span class="color" style="color: ${data.color}"></span>`;
-  //     return '<div class="item">' + content + '</div>';
-  //   },
-  //   option: function (data, escape) {
-  //     const field_label = this.settings.labelField;
-  //     const field_value = this.settings.valueField;
-  //     let content = escape(data[field_label]);
-  //     if (data.color) content += `<span class="color" style="color: ${data.color}"></span>`;
-  //     return '<div class="option ' + (data[field_value] === '' ? 'selectize-dropdown-emptyoptionlabel' : '') + '">' + content + '</div>';
-  //   },
-  // },
+$('.select').each((i, el) => {
+  let options
+  try {
+    options = JSON.parse(el.dataset.selectize);
+  } catch (e) {}
+  $(el).selectize({
+    ...options,
+    dropdownParent: 'body'
+  });
 });
 
 $('.toTop').on('click', () => {
@@ -54,5 +47,5 @@ $('.file').each((i, el) => {
 });
 
 $('[data-gallery]').each((i, el) => {
-  initGallery({ $items: $(el).find('[data-gallery-item]') });
+  initGallery({ container: el, itemsSelector: '[data-gallery-item]' });
 });

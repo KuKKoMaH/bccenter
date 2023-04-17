@@ -89,6 +89,15 @@ img[data-srcset] {
     margin-bottom: .5em;
   }
 
+  ul, ol {
+    margin-bottom: 1.55em;
+  }
+
+  ul li, ol li {
+    margin-bottom: .8em;
+  }
+
+
   > *:first-child {
     margin-top: 0;
   }
@@ -101,10 +110,30 @@ img[data-srcset] {
 .block {
   @include block-margin();
 
+  &--gray {
+    background: $neutral100;
+    margin: 0;
+    @include full-width();
+    @include block-padding();
+
+    & + & {
+      padding-top: 0;
+    }
+  }
+
   &__head {
     margin-bottom: 48px;
+    display: flex;
+    align-items: center;
     @include mobile() {
       margin-bottom: 32px;
+    }
+  }
+
+  &__aside {
+    margin-left: auto;
+    @include mobile() {
+      display: none;
     }
   }
 
@@ -113,6 +142,13 @@ img[data-srcset] {
     @include mobile() {
       @include headline-large();
     }
+
+    &--small {
+      @include headline-large();
+      @include mobile() {
+        @include headline-medium();
+      }
+    }
   }
 
   &__items {
@@ -120,9 +156,7 @@ img[data-srcset] {
     margin: -10px;
     flex-wrap: wrap;
     @include mobile() {
-      .block__item {
-        width: 100%;
-      }
+
       margin: 0;
     }
   }
@@ -134,6 +168,9 @@ img[data-srcset] {
       &:first-child {
         padding-top: 0;
       }
+      .block .block__items & {
+        width: 100%;
+      }
     }
   }
 
@@ -144,6 +181,13 @@ img[data-srcset] {
     justify-content: center;
     @include mobile() {
       margin-top: 32px;
+    }
+
+    &--mobile {
+      display: none;
+      @include mobile() {
+        display: flex;
+      }
     }
   }
 }

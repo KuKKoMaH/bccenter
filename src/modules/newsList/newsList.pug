@@ -1,0 +1,14 @@
+.newsList.block
+  .block__head
+    .block__title.block__title--small Похожие новости
+
+  .block__items
+    each i in ['Персонал в агропромышленном комплексе', 'Подбор персонала. Закрыта новая вакансия', '«Управление проектами» профессора Джорджа Сифри Московской школы управления СКОЛКОВО', 'Подбор персонала. Закрыта новая вакансия', 'Подбор персонала. Закрыта новая вакансия', 'Конференция "УПРАВЛЕНИЕ ПЕРСОНАЛОМ: практические подходы и инструменты"']
+      .block__item.newsList__item
+        a.newsList__card(href='#')
+          .newsList__image: img(srcset="https://placehold.jp/180x200.png, https://placehold.jp/500x140.png 870w" src='https://placehold.jp/180x200.png')
+          .newsList__info
+            .newsList__date 01.01.2023
+            .newsList__title=i
+  .block__action
+    button.btn.btn--outline Показать еще

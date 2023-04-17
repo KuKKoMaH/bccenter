@@ -1,10 +1,6 @@
 .services {
   $this: &;
 
-  background: $neutral100;
-  @include full-width();
-  @include block-padding();
-
   &__item {
     width: 50%;
   }

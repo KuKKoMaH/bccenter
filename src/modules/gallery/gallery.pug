@@ -1,0 +1,12 @@
+.gallery
+  .gallery__title Фото
+  .gallery__items(data-gallery)
+    each i in [1,2,3,4]
+      .gallery__item
+        a.gallery__img(href="https://placehold.jp/1024x1024.png?text="+i target="_blank" data-pswp-width="1024" data-pswp-height="1024" data-cropped="true" data-thumbnail='https://placehold.jp/110x80.png?text='+i data-gallery-item)
+          img(src='https://placehold.jp/210x210.png?text='+i width=210 height=140 )
+          if(i === 4)
+            .gallery__extra +3
+    each i in [5,6,7]
+      a.gallery__img(href="https://placehold.jp/1024x1024.png?text="+i target="_blank" data-pswp-width="1024" data-pswp-height="1024" data-thumbnail='https://placehold.jp/110x80.png?text='+i  data-gallery-item)
+

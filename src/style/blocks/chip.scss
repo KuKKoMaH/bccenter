@@ -1,0 +1,33 @@
+.chips {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: -4px;
+
+  > * {
+    margin: 4px;
+  }
+
+}
+
+.chip {
+  @include label-large();
+  padding: 9px 11px;
+  border: 1px solid $neutral300;
+  border-radius: 8px;
+  text-align: center;
+  @include anim();
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(248, 248, 250, 0.5);
+  }
+
+  &:active {
+    background: rgba(241, 241, 245, 0.5);
+  }
+
+  &--active {
+    border-color: $primary;
+  }
+}

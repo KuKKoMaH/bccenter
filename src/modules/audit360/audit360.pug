@@ -1,0 +1,24 @@
+mixin audit360rows(items)
+  each i in items
+    div
+      +the_svg('arrow-outward')
+      =i
+
+.audit360.block.block--gray
+  .c
+    .block__head
+      .block__title Аудит 360°
+    .audit360__text Для получения более полной аналитики предприятия рекомендуем использовать разные типы аудита опросов и оценки
+    .audit360__container
+      .audit360__item
+        .audit360__head Цели и#[br] стратегия#[br] бизнеса
+        .audit360__info: +audit360rows(['Стратегия', 'BSC', 'MBO', 'KPI', 'OKR', 'Бюджет'])
+      .audit360__item
+        .audit360__head Цели и#[br] мотивация#[br] сотрудников
+        .audit360__info: +audit360rows(['eNPS','EVP','Мониторинг з\\п'])
+      .audit360__item
+        .audit360__head Анализ#[br] внутренней#[br] системы#[br] управления,#[br] HR-метрик
+        .audit360__info: +audit360rows(['Организационный аудит','Функциональный аудит','Оценка OKR ','Оценка внутреннего сервиса','KPI'])
+      .audit360__item
+        .audit360__head Анализ сегментов#[br]бизнеса,#[br] конкурентов,#[br] внешней#[br] среды
+        .audit360__info: +audit360rows(['eNPS','EVP','NPS','Отраслевые сообщества','Постановления правительства РФ'])

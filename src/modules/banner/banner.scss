@@ -1,24 +1,49 @@
 .banner {
   $this: &;
 
-  @include block-margin();
+  &__item {
+    width: 50%;
+  }
 
   &__container {
     position: relative;
     overflow: hidden;
     display: flex;
     border-radius: 16px;
-    @include elevation-01();
+    @include elevation-02();
     padding: 48px;
-    background: $neutral400;
-    background: linear-gradient(90deg, #E6E6ED 35.74%, rgba(230, 230, 237, 0) 60.55%),
-    var(--banner-background),
-    #E6E6ED;
+    --banner-background: var(--background, transparent);
+    background: linear-gradient(90deg, #E6E6ED 35.74%, rgba(230, 230, 237, 0) 60.55%), var(--banner-background), #E6E6ED;
 
     @include mobile() {
       flex-direction: column;
       padding: 32px;
     }
+
+    &--red {
+      color: $white;
+      background: radial-gradient(43.9% 208.74% at 74.04% 50%, rgba(255, 0, 55, 0) 66.19%, #FF0037 100%), var(--banner-background), #FF0037;
+    }
+
+    &--black {
+      background: var(--banner-background), #F8F8FA;
+      color: $white;
+    }
+
+    &--sm {
+      padding: 32px;
+      @include mobile() {
+        padding: 24px;
+      }
+
+      #{$this}__title {
+        @include headline-large();
+        @include mobile() {
+          @include headline-medium();
+        }
+      }
+    }
+
   }
 
   &__main {
@@ -48,5 +73,18 @@
       margin-top: 8px;
       @include title-medium();
     }
+  }
+
+  &__text {
+    margin-top: 16px;
+    @include title-extra-large();
+    @include mobile() {
+      margin-top: 8px;
+      @include title-large();
+    }
+  }
+
+  &__action {
+    margin-top: 32px;
   }
 }

@@ -1,0 +1,34 @@
+.news {
+  $this: &;
+  max-width: 900px;
+
+  &__date {
+    color: $neutral600;
+    @include title-medium();
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    @include headline-extra-large();
+    margin-bottom: 48px;
+  }
+
+  &__image {
+    margin-bottom: 48px;
+
+    img {
+      border-radius: 8px;
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    @include body-medium();
+  }
+
+  &__gallery {
+    margin-top: 48px;
+  }
+}

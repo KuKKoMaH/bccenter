@@ -1,24 +1,37 @@
 .cards {
   $this: &;
 
+  &__items {
+    //@include elevation-02-filter();
+  }
+
   &__item {
     width: 33.3333%;
   }
 
   &__card {
+    position: relative;
     height: 100%;
     @include elevation-02();
-    background: $neutral100;
     padding: 32px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
+    background: $white;
     @include mobile() {
       padding: 16px;
       flex-direction: row;
       align-items: center;
     }
 
+    &--gray {
+      background: $neutral100;
+    }
+
+    &--green {
+      background: $sbg;
+      color: $white;
+    }
   }
 
   &__highlight {
@@ -37,7 +50,7 @@
     }
 
     #{$this} {
-      &__text {
+      &__head {
         @include headline-large();
         @include mobile() {
           @include headline-medium();
@@ -46,7 +59,13 @@
     }
   }
 
-  &__icon {
+  &__content {
+    flex: 1;
+    display: flex;
+    width: 100%;
+  }
+
+  &__img {
     margin-bottom: 24px;
     @include mobile() {
       margin: 0 16px 0 0;
@@ -63,10 +82,46 @@
     }
   }
 
-  &__text {
+  &__icon {
+    float: right;
+    margin-top: -12px;
+    margin-right: -12px;
+    //margin-left: 8px;
+
+    img {
+      display: block;
+    }
+
+    @include mobile() {
+      margin-top: -10px;
+      margin-right: -8px;
+      //margin-left: 12px;
+    }
+
+    &--bottom {
+      margin-top: auto;
+      margin-bottom: -12px;
+      align-self: flex-end;
+      @include mobile() {
+        margin-bottom: -10px;
+        margin-right: -8px;
+        //margin-left: 12px;
+      }
+    }
+  }
+
+  &__head {
+    width: 100%;
     @include headline-medium();
     @include mobile() {
       @include title-large();
+    }
+  }
+
+  &__text {
+    margin-top: 24px;
+    @include mobile() {
+      margin-top: 16px;
     }
   }
 
@@ -75,6 +130,14 @@
     margin-top: auto;
     @include mobile() {
       padding-top: 24px;
+    }
+  }
+
+  &--row2 {
+    #{$this} {
+      &__item {
+        width: 50%;
+      }
     }
   }
 }

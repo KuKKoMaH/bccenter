@@ -1,6 +1,6 @@
 import Breakpoints from "breakpoints-js";
 
-export const BREAKPOINT_LG = 980;
+export const BREAKPOINT_LG = 870;
 
 Breakpoints({
   sm: {

@@ -1,0 +1,21 @@
+.vacancies.block.block--gray
+  .c
+    .block__head
+      .block__title Вакансии
+      .block__aside
+        a.link(href='#')
+          span Все клиенты
+          +the_svg('arrow')
+
+    .block__items
+      each i in [1,2,3,4,5,6]
+        .block__item.vacancies__item
+          a.vacancies__card(href='#')
+            .vacancies__name Заведующий производством
+            .vacancies__salary от 60 000 руб.
+            .vacancies__category Энергетика
+
+    .block__action.block__action--mobile
+      a.btn.btn--outline(href='#')
+        span Все вакансии
+        +the_svg('arrow')

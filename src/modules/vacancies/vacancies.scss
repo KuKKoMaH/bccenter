@@ -1,0 +1,31 @@
+.vacancies {
+  $this: &;
+
+  &__item {
+    width: 33.3333%;
+  }
+
+  &__card {
+    padding: 16px;
+    border-radius: 8px;
+    @include elevation-01();
+    background: $white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    @include headline-small();
+  }
+
+  &__salary {
+    margin-top: 8px;
+    @include title-medium();
+  }
+
+  &__category {
+    @include label-large();
+    margin-top: 8px;
+    opacity: .6;
+  }
+}

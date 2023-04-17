@@ -1,0 +1,11 @@
+.breadcrumbs {
+  $this: &;
+
+  color: $neutral600;
+  @include label-large();
+
+  a {
+    color: $neutral500;
+  }
+
+}

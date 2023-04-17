@@ -2,8 +2,51 @@
   .c
     .map__title О компании
 
-    .map__image
-      img(src=require('src/img/map.png'))
+    .map__image(data-width='1337', data-height='640')
+      .map__regions
+        .map__region(style='width: 39px;height: 29px;top: 584px;left: 167px;')
+          +the_svg('RU-STA', 'map')
+          span Ставрополь
+        .map__region(style='width: 67px;height: 69px;top: 558px;left: 868px;')
+          +the_svg('RU-PRI', 'map')
+          span Владивосток
+        .map__region(style='width: 39px;height: 37px;top: 449px;left: 123px;')
+          +the_svg('RU-MOS', 'map')
+          //+the_svg('RU-MOW', 'map')
+          span Москва и МО
+        .map__region(style='width: 12px;height: 12px;top: 397px;left: 76px;')
+          +the_svg('RU-SPE', 'map')
+          span Санкт-Петербург
+        .map__region(style='width: 48px;height: 49px;top: 538px;left: 147px;')
+          +the_svg('RU-ROS', 'map')
+          span Ростов-на-Дону
+        .map__region(style='width: 35px;height: 20px;top: 473px;left: 178px;')
+          +the_svg('RU-MO', 'map')
+          span Саранск
+        .map__region(style='width: 54px;height: 36px;top: 452px;left: 218px;')
+          +the_svg('RU-TA', 'map')
+          span Набережные Челны
+        .map__region(style='width: 30px;height: 35px;top: 419px;left: 140px;')
+          +the_svg('RU-YAR', 'map')
+          span Ярославль
+        .map__region(style='width: 32px;height: 20px;top: 522px;left: 124px;')
+          +the_svg('RU-BEL', 'map')
+          span Белгород
+        .map__region(style='width: 65px;height: 37px;top: 505px;left: 181px;')
+          +the_svg('RU-SAR', 'map')
+          span Саратов
+        .map__region(style='width: 79px;height: 70px;top: 404px;left: 356px;')
+          +the_svg('RU-TYU', 'map')
+          span Тюмень
+        .map__region(style='width: 70px;height: 89px;top: 371px;left: 295px;')
+          +the_svg('RU-SVE', 'map')
+          span Екатеринбург
+        .map__region(style='width: 39px;height: 22px;top: 489px;left: 177px;')
+          +the_svg('RU-PNZ', 'map')
+          span Пенза и Пензенская область
+
+
+      +the_svg('map', 'map')
       .map__count
         .map__number 15+
         | регионов

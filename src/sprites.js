@@ -1,1 +1,1 @@
-require.context('./img/', true, /\.sprite.svg$/);
+require.context('./', true, /\.sprite.svg$/);

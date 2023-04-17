@@ -1,0 +1,26 @@
+.regalia {
+  $this: &;
+  @include full-width();
+  --regalia-background: var(--background, transparent);
+  background: linear-gradient(90deg, #FFFFFF 51.47%, rgba(255, 255, 255, 0) 67.42%), var(--regalia-background), #FFFFFF;
+  border-radius: 16px;
+
+  @include mobile() {
+    background: linear-gradient(0deg, rgba(243, 243, 243, 0.72), rgba(243, 243, 243, 0.72)), var(--regalia-background), #FFFFFF;
+  }
+
+  &__container {
+    max-width: 748px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__content {
+    @include title-extra-large();
+    @include mobile() {
+      @include title-medium();
+    }
+  }
+}

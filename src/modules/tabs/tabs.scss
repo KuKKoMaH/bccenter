@@ -1,0 +1,138 @@
+.tabs {
+  $this: &;
+
+  &__heads {
+    display: flex;
+    margin-bottom: 48px;
+    @include mobile() {
+      margin-bottom: 32px;
+    }
+
+    &--centered {
+      justify-content: center;
+
+      @include mobile() {
+        flex-direction: column;
+
+        #{$this}__head {
+          width: 100%;
+          text-align: left;
+          margin: 0;
+          margin-top: 16px;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__head {
+    position: relative;
+    text-align: center;
+    @include headline-small();
+    margin-left: 48px;
+    padding-bottom: 20px;
+    min-width: 0;
+    max-width: 500px;
+    @include mobile() {
+      @include title-small();
+      margin-left: 8px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 100%;
+      height: 4px;
+      margin-top: -4px;
+      border-radius: 2px;
+    }
+
+    &:before {
+      width: 100%;
+      background: $neutral300;
+    }
+
+    &:after {
+      width: 0;
+      background: $primary;
+      @include anim();
+    }
+
+    &--active {
+      &:after {
+        width: 40%;
+      }
+    }
+  }
+
+  &__bodies {
+    position: relative;
+  }
+
+  &__body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include hidden();
+    transform: translateY(-20px);
+    @include anim(.2s);
+
+    &--active {
+      position: relative;
+      @include visible();
+      transform: none;
+    }
+  }
+
+  &__image {
+    img {
+      margin: 0 auto;
+      display: block;
+      max-width: 100%;
+      border-radius: 16px;
+      @include elevation-03();
+    }
+  }
+
+  &__ability {
+    display: flex;
+    align-items: center;
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  &__ability-image {
+    margin-right: 48px;
+    @include mobile() {
+      margin: 0 0 16px 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      @include elevation-03();
+    }
+  }
+
+  &__ability-text {
+    width: 330px;
+    flex-shrink: 0;
+    @include headline-medium();
+    @include mobile() {
+      width: 100%;
+      text-align: center;
+      @include title-medium();
+    }
+  }
+}

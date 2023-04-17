@@ -1,0 +1,87 @@
+.realize {
+  $this: &;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    @include title-extra-large();
+    width: 450px;
+    min-width: 350px;
+    padding-right: 10px;
+    margin-right: auto;
+    @include mobile() {
+      @include title-medium();
+      padding-right: 0;
+      width: 100%;
+      min-width: 0;
+      margin: 0 0 32px 0;
+    }
+  }
+
+  &__aside {
+    max-width: 900px;
+    min-width: 0;
+    position: relative;
+    @include mobile() {
+      width: 100%;
+    }
+  }
+
+  &__slider {
+    overflow: hidden;
+    border-radius: 16px;
+    @include elevation-01();
+  }
+
+  &__slides {
+    display: flex;
+  }
+
+  &__slide {
+    width: 100%;
+    flex-shrink: 0;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    @include mobile() {
+      bottom: 8px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 64px;
+      height: 6px;
+      border-radius: 3px;
+      background: $neutral500;
+      margin: 0 4px;
+      @include anim();
+      cursor: pointer;
+      @include mobile() {
+        width: 32px;
+        height: 4px;
+        border-radius: 2px;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $primary;
+    }
+  }
+}

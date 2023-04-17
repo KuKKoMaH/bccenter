@@ -1,5 +1,6 @@
 import 'jquery';
-import 'selectize';
+import '@selectize/selectize';
+// import '@selectize/selectize/dist/css/selectize.css'
 import './js/scriptLoader';
 import './js/breakpoints';
 import './js/init';
@@ -10,7 +11,7 @@ import './sprites';
 
 import './modules/header/header.js';
 import './modules/footer/footer.js';
-import './modules/head/head.js';
+import './modules/hero/hero.js';
 import './modules/welcome/welcome.js';
 import './modules/ceo/ceo.js';
 import './modules/directions/directions.js';
@@ -22,3 +23,18 @@ import './modules/cards/cards.js';
 import './modules/services/services.js';
 import './modules/steps/steps.js';
 import './modules/faq/faq.js';
+import './modules/vacancies/vacancies.js';
+import './modules/head/head.js';
+import './modules/breadcrumbs/breadcrumbs.js';
+import './modules/vacancy/vacancy.js';
+import './modules/newsList/newsList.js';
+import './modules/news/news.js';
+import './modules/gallery/gallery.js';
+import './modules/clientsList/clientsList.js';
+import './modules/regalia/regalia.js';
+import './modules/sbg/sbg.js';
+import './modules/tabs/tabs.js';
+import './modules/audit360/audit360.js';
+import './modules/cta/cta.js';
+import './modules/realize/realize.js';
+import './modules/profile/profile.js';

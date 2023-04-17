@@ -1,0 +1,58 @@
+.gallery {
+  $this: &;
+
+  &__title {
+    margin-bottom: 24px;
+    @include headline-large();
+  }
+
+  &__items {
+    margin: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    @include mobile() {
+      margin: -5px;
+    }
+  }
+
+  &__item {
+    padding: 10px;
+    width: 25%;
+    @include mobile() {
+      width: 50%;
+      padding: 5px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    display: block;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 140px;
+      border-radius: 8px;
+      object-fit: cover;
+      @include mobile() {
+        height: 100px;
+      }
+    }
+  }
+
+  &__extra {
+    background: rgba(21, 21, 25, 0.5);
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-size: 32px;
+    line-height: 44px;
+  }
+}
