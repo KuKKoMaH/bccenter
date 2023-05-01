@@ -51,3 +51,6 @@ import './modules/audit360/audit360.scss';
 import './modules/cta/cta.scss';
 import './modules/realize/realize.scss';
 import './modules/profile/profile.scss';
+import './modules/img/img.scss';
+import './modules/methods/methods.scss';
+import './modules/popup/popup.scss';

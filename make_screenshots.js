@@ -25,7 +25,7 @@ const fs = require('fs');
     await page.goto('file://' + path.resolve(distDir, file), { waitUntil: 'networkidle0' });
     await new Promise(r => setTimeout(r, 1000));
 
-    const elements = await page.$$('.block');
+    const elements = await page.$$('body > .c > *');
     for (let el of elements) {
       const classNames = await (await el.getProperty('className')).jsonValue();
       let className = classNames.split(' ').find(className => !className.includes('block'));

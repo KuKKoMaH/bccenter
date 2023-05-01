@@ -1,0 +1,34 @@
+.img {
+  $this: &;
+
+  &__container {
+    position: relative;
+  }
+
+  &__image {
+    position: relative;
+    z-index: 1;
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    &--background {
+      img {
+        border-radius: 16px;
+        @include elevation-01();
+      }
+    }
+  }
+
+  &__background {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}

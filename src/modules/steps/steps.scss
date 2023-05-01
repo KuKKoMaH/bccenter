@@ -13,6 +13,8 @@
     --card-background: var(--background, transparent);
     background: radial-gradient(96.13% 105.4% at 0% 0%, #F8F8FA 0%, rgba(248, 248, 250, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
     , var(--card-background), #FFFFFF;
+    background-position: 50% 50%;
+    background-size: cover;
 
     @include mobile() {
       padding: 24px;

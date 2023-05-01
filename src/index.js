@@ -1,11 +1,12 @@
 import 'jquery';
-import '@selectize/selectize';
+// import '@selectize/selectize';
 // import '@selectize/selectize/dist/css/selectize.css'
 import './js/scriptLoader';
 import './js/breakpoints';
 import './js/init';
 import './js/initGallery';
 import './js/initMap';
+import './js/initInputs';
 import './style';
 import './sprites';
 
@@ -38,3 +39,6 @@ import './modules/audit360/audit360.js';
 import './modules/cta/cta.js';
 import './modules/realize/realize.js';
 import './modules/profile/profile.js';
+import './modules/img/img.js';
+import './modules/methods/methods.js';
+import './modules/popup/popup';

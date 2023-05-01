@@ -14,6 +14,8 @@
     padding: 48px;
     --banner-background: var(--background, transparent);
     background: linear-gradient(90deg, #E6E6ED 35.74%, rgba(230, 230, 237, 0) 60.55%), var(--banner-background), #E6E6ED;
+    background-size: cover;
+    background-position: 50% 50%;
 
     @include mobile() {
       flex-direction: column;
@@ -23,11 +25,22 @@
     &--red {
       color: $white;
       background: radial-gradient(43.9% 208.74% at 74.04% 50%, rgba(255, 0, 55, 0) 66.19%, #FF0037 100%), var(--banner-background), #FF0037;
+      background-size: cover;
+      background-position: 50% 50%;
     }
 
     &--black {
       background: var(--banner-background), #F8F8FA;
       color: $white;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+
+    &--sbg {
+      background: radial-gradient(65.15% 109.05% at 65.15% 50%, rgba(3, 110, 120, 0) 38.64%, #036E78 100%), var(--banner-background);
+      color: $white;
+      background-size: cover;
+      background-position: 50% 50%;
     }
 
     &--sm {

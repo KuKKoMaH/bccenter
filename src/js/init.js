@@ -1,5 +1,6 @@
 import IMask from 'imask';
-
+import TomSelect from "tom-select";
+// import 'tom-select/dist/css/tom-select.default.css';
 // import './initMap';
 import './initPopups';
 import "src/js/initGallery";
@@ -22,14 +23,25 @@ document.querySelectorAll('input[type="tel"]').forEach(el => {
 // $('input[type="tel"]').mask("+7 (999) 999-99-99");
 
 $('.select').each((i, el) => {
-  let options
-  try {
-    options = JSON.parse(el.dataset.selectize);
-  } catch (e) {}
-  $(el).selectize({
-    ...options,
+  new TomSelect(el, {
+    controlInput: null,
+    plugins: {
+      clear_button: {
+        html: function(data){
+          return `<button class="${data.className}" title="${data.title}">&#215;</button>`;
+        }
+      }
+    },
     dropdownParent: 'body'
   });
+  // let options
+  // try {
+  //   options = JSON.parse(el.dataset.selectize);
+  // } catch (e) {}
+  // $(el).selectize({
+  //   ...options,
+  //   dropdownParent: 'body'
+  // });
 });
 
 $('.toTop').on('click', () => {

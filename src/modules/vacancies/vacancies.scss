@@ -1,11 +1,18 @@
 .vacancies {
   $this: &;
 
+  &--2col {
+    #{$this}__item {
+      width: 50%;
+    }
+  }
+
   &__item {
     width: 33.3333%;
   }
 
   &__card {
+    height: 100%;
     padding: 16px;
     border-radius: 8px;
     @include elevation-01();

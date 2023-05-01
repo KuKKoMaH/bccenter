@@ -90,6 +90,10 @@
     }
   }
 
+  &--block {
+    width: 100%;
+  }
+
   svg {
     flex-shrink: 0;
     width: 24px;

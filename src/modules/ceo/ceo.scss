@@ -1,8 +1,6 @@
 .ceo {
   $this: &;
 
-  @include block-margin();
-
   &__container {
     display: flex;
     align-items: flex-start;

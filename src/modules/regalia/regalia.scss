@@ -3,6 +3,7 @@
   @include full-width();
   --regalia-background: var(--background, transparent);
   background: linear-gradient(90deg, #FFFFFF 51.47%, rgba(255, 255, 255, 0) 67.42%), var(--regalia-background), #FFFFFF;
+  background-size: cover;
   border-radius: 16px;
 
   @include mobile() {

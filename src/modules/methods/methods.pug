@@ -1,0 +1,10 @@
+.methods.block
+  .block__head
+    .block__title methods
+  .block__items
+    each i in [['DISK', 'Оценивает тип<br/>поведения и мировоззрения'], ['EQ', 'Оценивает уровень<br/>эмоционального интеллекта'], ['DF', 'Оценивает<br/>ведущие факторы мотивации']]
+      .block__item.methods__item
+        .methods__card
+          .methods__head=i[0]
+          .methods__text !{i[1]}
+          .methods__img: img(src='https://placehold.jp/382x382.png')

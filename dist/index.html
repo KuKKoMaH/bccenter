@@ -7,7 +7,7 @@
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
     <!--link(rel="stylesheet" media="all" href="style.css")-->
     <!--link(rel="shortcut icon" href="/favicon.ico")-->
-  <link href="style.css?1681758116958" rel="stylesheet"></head>
+  <link href="style.css?1682844859843" rel="stylesheet"></head>
   <body onunload="">
     <!--include ../modules/header/header-->
     <div class="header">
@@ -27,7 +27,7 @@
                 </svg>
               </div>
             </button>
-            <button class="btn btn--outline-white">Заявка</button>
+            <button class="btn btn--outline-white" data-micromodal-trigger="callback-popup">Заявка</button>
           </div>
           <div class="header__aside header__aside--mobile">
             <button class="header__search-button">
@@ -161,24 +161,24 @@
       </div>
       <div class="welcome">
         <div class="welcome__items">
-          <div class="welcome__item">
-            <div class="welcome__card welcome__card--01">
+          <div class="welcome__item" style="--background: url(img/img_pattern_01.png)">
+            <div class="welcome__card">
               <div class="welcome__text">Оказываем комплексные услуги по развитию HR-систем под заказчика с целью повышения эффективности бизнеса в различных сферах</div>
             </div>
           </div>
-          <div class="welcome__item">
-            <div class="welcome__card welcome__card--02">
+          <div class="welcome__item" style="--background: url(img/img_pattern_02.png)">
+            <div class="welcome__card">
               <div class="welcome__text">Имеем устойчивую репутацию  надежного стратегического партнера. Развиваем формат Digital HR аутсорсинга</div>
             </div>
           </div>
-          <div class="welcome__item">
-            <div class="welcome__card welcome__card--03">
+          <div class="welcome__item" style="--background: url(img/img_pattern_03.png)">
+            <div class="welcome__card">
               <div class="welcome__text">Занимаемся автоматизацией и цифровизацией лучших мировых практик, адаптированных в России на платформе SBG</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="ceo">
+      <div class="ceo block">
         <div class="ceo__container">
           <div class="ceo__img"><img src="img/img_ceo.jpg"></div>
           <div class="ceo__content">
@@ -718,7 +718,7 @@
           </div>
         </div>
       </div>
-      <div class="vacancies block block--gray">
+      <div class="vacancies vacancies--2col block block--gray">
         <div class="c">
           <div class="block__head">
             <div class="block__title">Вакансии</div>
@@ -775,32 +775,35 @@
             </div>
           </div>
           <div class="head__filter">
-            <div>
-              <select class="select select--sm" placeholder="Тип занятости" data-selectize="{&quot;allowEmptyOption&quot;: true,&quot;plugins&quot;: [&quot;clear_button&quot;]}">
+            <div class="input" style="--background: #F8F8FA">
+              <select class="select select--sm">
                 <option></option>
                 <option>Полная</option>
                 <option>Частичная</option>
                 <option>Удаленная</option>
                 <option>Гибритный формат</option>
               </select>
+              <label>Тип занятости</label>
             </div>
-            <div>
-              <select class="select select--sm" placeholder="Уровень дохода" data-selectize="{&quot;allowEmptyOption&quot;: true,&quot;plugins&quot;: [&quot;clear_button&quot;]}">
+            <div class="input">
+              <select class="select select--sm">
                 <option></option>
                 <option>от 20 000 руб.</option>
                 <option>от 40 000 руб.</option>
                 <option>от 80 000 руб.</option>
                 <option>от 120 000 руб.</option>
               </select>
+              <label>Уровень дохода</label>
             </div>
-            <div>
-              <select class="select select--sm" placeholder="Опыт работы" data-selectize="{&quot;allowEmptyOption&quot;: true,&quot;plugins&quot;: [&quot;clear_button&quot;]}">
+            <div class="input">
+              <select class="select select--sm">
                 <option></option>
                 <option>Нет опыта</option>
                 <option>От 1 года до 3 лет</option>
                 <option>От 3 до 6 лет</option>
                 <option>Более 6 лет</option>
               </select>
+              <label>Опыт работы</label>
             </div>
           </div>
         </div>
@@ -1085,28 +1088,28 @@
         <div class="block__head">
           <div class="block__title">Возможности платформы</div>
         </div>
-        <div class="tabs__heads">
-          <button class="tabs__head tabs__head--active">Аудит управления предприятием</button>
-          <button class="tabs__head">Оценка мотивационных факторов eNPS</button>
-          <button class="tabs__head">Оценка личностного потенциала</button>
+        <div class="tabs__heads tabs__heads--left">
+          <button class="tabs__head tabs__head--active"><span>Аудит управления предприятием</span></button>
+          <button class="tabs__head"><span>Оценка мотивационных факторов eNPS</span></button>
+          <button class="tabs__head"><span>Оценка личностного потенциала</span></button>
         </div>
         <div class="tabs__bodies">
           <div class="tabs__body tabs__body--active">
-            <div class="tabs__ability">
-              <div class="tabs__ability-image"><img src="https://placehold.jp/900x500.png"></div>
-              <div class="tabs__ability-text">Пример отчета</div>
+            <div class="tabs__textimage">
+              <button class="tabs__textimage-image" data-youtube-id="dQw4w9WgXcQ" data-micromodal-trigger="iframe-popup"><img src="https://placehold.jp/900x500.png"></button>
+              <div class="tabs__textimage-text">Пример отчета</div>
             </div>
           </div>
           <div class="tabs__body">
-            <div class="tabs__ability">
-              <div class="tabs__ability-image"><img src="https://placehold.jp/900x500.png"></div>
-              <div class="tabs__ability-text">Пример отчета</div>
+            <div class="tabs__textimage">
+              <div class="tabs__textimage-image"><img src="https://placehold.jp/900x500.png"></div>
+              <div class="tabs__textimage-text">Пример отчета</div>
             </div>
           </div>
           <div class="tabs__body">
-            <div class="tabs__ability">
-              <div class="tabs__ability-image"><img src="https://placehold.jp/900x500.png"></div>
-              <div class="tabs__ability-text">Пример отчета</div>
+            <div class="tabs__textimage">
+              <div class="tabs__textimage-image"><img src="https://placehold.jp/900x500.png"></div>
+              <div class="tabs__textimage-text">Пример отчета</div>
             </div>
           </div>
         </div>
@@ -1244,9 +1247,9 @@
           <div class="block__head">
             <div class="block__title">Примеры отчётов по аудиту</div>
           </div>
-          <div class="tabs__heads tabs__heads--centered">
-            <button class="tabs__head tabs__head--active">ФУНКЦИОНАЛЬНЫЙ АУДИТ</button>
-            <button class="tabs__head">ОРГАНИЗАЦИОННЫЙ АУДИТ</button>
+          <div class="tabs__heads">
+            <button class="tabs__head tabs__head--active"><span>ФУНКЦИОНАЛЬНЫЙ АУДИТ</span></button>
+            <button class="tabs__head"><span>ОРГАНИЗАЦИОННЫЙ АУДИТ</span></button>
           </div>
           <div class="tabs__bodies">
             <div class="tabs__body tabs__body--active">
@@ -1260,11 +1263,35 @@
       </div>
       <div class="tabs block block--gray">
         <div class="c">
-          <div class="tabs__heads tabs__heads--centered">
-            <button class="tabs__head tabs__head--active">ОЦЕНКА ИНДЕКСА ПОТРЕБИТЕЛЬСКОЙ ЛОЯЛЬНОСТИ NPS</button>
-            <button class="tabs__head">ОЦЕНКА ПРОЕКТНОЙ<br>ДЕЯТЕЛЬНОСТИ</button>
+          <div class="tabs__heads">
+            <button class="tabs__head tabs__head--active"><span>ОЦЕНКА ИНДЕКСА ПОТРЕБИТЕЛЬСКОЙ ЛОЯЛЬНОСТИ NPS</span></button>
+            <button class="tabs__head"><span>ОЦЕНКА ПРОЕКТНОЙ<br>ДЕЯТЕЛЬНОСТИ</span></button>
           </div>
           <div class="tabs__bodies">
+            <div class="tabs__body tabs__body--active">
+              <div class="tabs__image"><img src="https://placehold.jp/900x500.png"></div>
+            </div>
+            <div class="tabs__body">
+              <div class="tabs__image"><img src="https://placehold.jp/900x500.png"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabs block block--gray">
+        <div class="c">
+          <div class="tabs__heads tabs__heads--2col">
+            <button class="tabs__head tabs__head--active"><span>Оценка профессиональных компетенций</span></button>
+            <button class="tabs__head"><span>Оценка личностных компетенций</span></button>
+            <button class="tabs__head"><span>Оценка управленческих компетенций</span></button>
+            <button class="tabs__head"><span>Оценка потенциала</span></button>
+          </div>
+          <div class="tabs__bodies">
+            <div class="tabs__body tabs__body--active">
+              <div class="tabs__image"><img src="https://placehold.jp/900x500.png"></div>
+            </div>
+            <div class="tabs__body">
+              <div class="tabs__image"><img src="https://placehold.jp/900x500.png"></div>
+            </div>
             <div class="tabs__body tabs__body--active">
               <div class="tabs__image"><img src="https://placehold.jp/900x500.png"></div>
             </div>
@@ -1339,6 +1366,44 @@
           </div>
         </div>
       </div>
+      <div class="img block">
+        <div class="block__head">
+          <div class="block__title">Цифровой профиль и оценка кандидата</div>
+        </div>
+        <div class="img__container">
+          <div class="img__background"><img src="img/modules_img_img_bg_2.svg"></div>
+          <div class="img__image"><img src="https://placehold.jp/1800x600.png"></div>
+        </div>
+        <!--.img__image.img__image--background: img(src='https://placehold.jp/1800x600.png')-->
+      </div>
+      <div class="methods block">
+        <div class="block__head">
+          <div class="block__title">methods</div>
+        </div>
+        <div class="block__items">
+          <div class="block__item methods__item">
+            <div class="methods__card">
+              <div class="methods__head">DISK</div>
+              <div class="methods__text">Оценивает тип<br/>поведения и мировоззрения</div>
+              <div class="methods__img"><img src="https://placehold.jp/382x382.png"></div>
+            </div>
+          </div>
+          <div class="block__item methods__item">
+            <div class="methods__card">
+              <div class="methods__head">EQ</div>
+              <div class="methods__text">Оценивает уровень<br/>эмоционального интеллекта</div>
+              <div class="methods__img"><img src="https://placehold.jp/382x382.png"></div>
+            </div>
+          </div>
+          <div class="block__item methods__item">
+            <div class="methods__card">
+              <div class="methods__head">DF</div>
+              <div class="methods__text">Оценивает<br/>ведущие факторы мотивации</div>
+              <div class="methods__img"><img src="https://placehold.jp/382x382.png"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="footer">
       <div class="c">
@@ -1379,8 +1444,151 @@
     <!--include ../modules/popup/popup-discount-->
     <!--include ../modules/popup/popup-iframe-->
     <!--include ../modules/popup/popup-order-->
-    <!--include ../modules/popup/popup-politic-->
+    <div class="popup micromodal-slide" id="callback-popup" aria-hidden="true">
+      <div class="popup__overlay" tabindex="-1" data-micromodal-close>
+        <div class="popup__container" role="dialog" aria-modal="true">
+          <button class="popup__close" data-micromodal-close>
+            <svg>
+              <use xlink:href="img/sprite.svg#x-usage"></use>
+            </svg>
+          </button>
+          <div class="popup__title">Задать вопрос</div>
+          <div class="popup__wizard" style="--total: 2; --step: 1;">
+            <div class="popup__supheader">Опрос для организаций</div>
+            <div class="popup__wizard-heads">
+              <div class="popup__wizard-head popup__wizard-head--active">
+                <div class="popup__header">С какими проблемами вы столкнулись?</div>
+              </div>
+              <div class="popup__wizard-head">
+                <div class="popup__header">Данные о вас и вашей компании</div>
+              </div>
+            </div>
+            <div class="popup__wizard-info">
+              <label><span></span>/<span></span></label>
+              <div class="popup__wizard-progress"></div>
+            </div>
+            <div class="popup__wizard-bodies">
+              <div class="popup__wizard-body popup__wizard-body--active">
+                <div class="popup__tabs">
+                  <div class="popup__tabs-heads">
+                    <button class="popup__tabs-head popup__tabs-head--active">Организация</button>
+                    <button class="popup__tabs-head">Соискатель</button>
+                  </div>
+                  <div class="popup__tabs-bodies">
+                    <div class="popup__tabs-body popup__tabs-body--active">
+                      <div class="popup__cols">
+                        <div class="popup__item">
+                          <div class="input">
+                            <select class="select" data-selectize="{&quot;allowEmptyOption&quot;: true}">
+                              <option value=""></option>
+                              <option value="1">Цифровая оценка кандидата</option>
+                              <option value="2">Оценка профессиональных компетенций</option>
+                              <option value="3">Оценка управленческих компетенций</option>
+                            </select>
+                            <label>Выбрать специализацию</label>
+                          </div>
+                        </div>
+                        <div class="popup__item">
+                          <div class="input">
+                            <select class="select">
+                              <option></option>
+                              <option>Цифровая оценка кандидата</option>
+                              <option>Оценка профессиональных компетенций</option>
+                              <option>Оценка управленческих компетенций</option>
+                            </select>
+                            <label>Выбрать специализацию</label>
+                          </div>
+                        </div>
+                        <div class="popup__item">
+                          <label class="checkbox">
+                            <input type="checkbox"><span>Выбрать специализацию</span>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#checkbox-usage"></use>
+                            </svg>
+                          </label>
+                        </div>
+                        <div class="popup__item">
+                          <label class="checkbox">
+                            <input type="checkbox"><span>Выбрать</span>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#checkbox-usage"></use>
+                            </svg>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="popup__form">
+                        <div class="input">
+                          <select class="select" data-selectize="{&quot;allowEmptyOption&quot;: true}">
+                            <option value=""></option>
+                            <option value="1">Цифровая оценка кандидата</option>
+                            <option value="2">Оценка профессиональных компетенций</option>
+                            <option value="3">Оценка управленческих компетенций</option>
+                          </select>
+                          <label>Выбрать специализацию</label>
+                        </div>
+                        <div class="input">
+                          <select class="select">
+                            <option></option>
+                            <option>Цифровая оценка кандидата</option>
+                            <option>Оценка профессиональных компетенций</option>
+                            <option>Оценка управленческих компетенций</option>
+                          </select>
+                          <label>Выбрать специализацию</label>
+                        </div>
+                        <label class="checkbox">
+                          <input type="checkbox"><span>Выбрать специализацию</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#checkbox-usage"></use>
+                          </svg>
+                        </label>
+                        <div class="input">
+                          <input class="wpcf7-not-valid">
+                          <label>Вопрос</label>
+                        </div>
+                        <div class="input">
+                          <input>
+                          <label>ФИО*</label>
+                        </div>
+                        <div class="input">
+                          <input>
+                          <label>Телефон*</label>
+                        </div>
+                        <div class="input">
+                          <input>
+                          <label>Почта</label>
+                        </div>
+                        <button class="btn btn--block">Отправить</button>
+                      </div>
+                    </div>
+                    <div class="popup__tabs-body"></div>
+                  </div>
+                </div>
+                <div class="popup__wizard-footer">
+                  <button class="btn btn--outline" data-wizard-prev>Назад</button>
+                  <button class="btn" data-wizard-next>Дальше</button>
+                </div>
+              </div>
+              <div class="popup__wizard-body">
+                <div class="popup__wizard-footer">
+                  <button class="btn btn--outline" data-wizard-prev>Назад</button>
+                  <div class="popup__wizard-text">
+                    <div class="popup__note">Нажимая кнопку, я даю свое <a href="#">согласие на обработку персональных данных</a> и соглашаюсь с <a href="#">условиями политики конфиденциальности</a></div>
+                  </div>
+                  <button class="btn" data-wizard-next>Дальше</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup__note">Нажимая кнопку, я даю свое <a href="#">согласие на обработку персональных данных</a> и соглашаюсь с <a href="#">условиями политики конфиденциальности</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup micromodal-slide" id="iframe-popup" aria-hidden="true">
+      <div class="popup__overlay" tabindex="-1" data-micromodal-close>
+        <div class="popup__iframe"></div>
+      </div>
+    </div>
     <div class="hidden"></div>
     <script>(function ( w, dE ) {function u() {dE.style.setProperty('--scrollbar-width', w.innerWidth - dE.clientWidth + "px");}w.addEventListener('resize', u);u()})(window, document.documentElement)</script>
-  <script defer src="app.js"></script></body>
+  <script defer src="js/app.js"></script></body>
 </html>

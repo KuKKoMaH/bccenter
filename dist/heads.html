@@ -7,7 +7,7 @@
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
     <!--link(rel="stylesheet" media="all" href="style.css")-->
     <!--link(rel="shortcut icon" href="/favicon.ico")-->
-  <link href="style.css?1681758116958" rel="stylesheet"></head>
+  <link href="style.css?1682844859843" rel="stylesheet"></head>
   <body onunload="">
     <!--include ../modules/header/header-->
     <div class="header">
@@ -27,7 +27,7 @@
                 </svg>
               </div>
             </button>
-            <button class="btn btn--outline-white">Заявка</button>
+            <button class="btn btn--outline-white" data-micromodal-trigger="callback-popup">Заявка</button>
           </div>
           <div class="header__aside header__aside--mobile">
             <button class="header__search-button">
@@ -237,8 +237,151 @@
     <!--include ../modules/popup/popup-discount-->
     <!--include ../modules/popup/popup-iframe-->
     <!--include ../modules/popup/popup-order-->
-    <!--include ../modules/popup/popup-politic-->
+    <div class="popup micromodal-slide" id="callback-popup" aria-hidden="true">
+      <div class="popup__overlay" tabindex="-1" data-micromodal-close>
+        <div class="popup__container" role="dialog" aria-modal="true">
+          <button class="popup__close" data-micromodal-close>
+            <svg>
+              <use xlink:href="img/sprite.svg#x-usage"></use>
+            </svg>
+          </button>
+          <div class="popup__title">Задать вопрос</div>
+          <div class="popup__wizard" style="--total: 2; --step: 1;">
+            <div class="popup__supheader">Опрос для организаций</div>
+            <div class="popup__wizard-heads">
+              <div class="popup__wizard-head popup__wizard-head--active">
+                <div class="popup__header">С какими проблемами вы столкнулись?</div>
+              </div>
+              <div class="popup__wizard-head">
+                <div class="popup__header">Данные о вас и вашей компании</div>
+              </div>
+            </div>
+            <div class="popup__wizard-info">
+              <label><span></span>/<span></span></label>
+              <div class="popup__wizard-progress"></div>
+            </div>
+            <div class="popup__wizard-bodies">
+              <div class="popup__wizard-body popup__wizard-body--active">
+                <div class="popup__tabs">
+                  <div class="popup__tabs-heads">
+                    <button class="popup__tabs-head popup__tabs-head--active">Организация</button>
+                    <button class="popup__tabs-head">Соискатель</button>
+                  </div>
+                  <div class="popup__tabs-bodies">
+                    <div class="popup__tabs-body popup__tabs-body--active">
+                      <div class="popup__cols">
+                        <div class="popup__item">
+                          <div class="input">
+                            <select class="select" data-selectize="{&quot;allowEmptyOption&quot;: true}">
+                              <option value=""></option>
+                              <option value="1">Цифровая оценка кандидата</option>
+                              <option value="2">Оценка профессиональных компетенций</option>
+                              <option value="3">Оценка управленческих компетенций</option>
+                            </select>
+                            <label>Выбрать специализацию</label>
+                          </div>
+                        </div>
+                        <div class="popup__item">
+                          <div class="input">
+                            <select class="select">
+                              <option></option>
+                              <option>Цифровая оценка кандидата</option>
+                              <option>Оценка профессиональных компетенций</option>
+                              <option>Оценка управленческих компетенций</option>
+                            </select>
+                            <label>Выбрать специализацию</label>
+                          </div>
+                        </div>
+                        <div class="popup__item">
+                          <label class="checkbox">
+                            <input type="checkbox"><span>Выбрать специализацию</span>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#checkbox-usage"></use>
+                            </svg>
+                          </label>
+                        </div>
+                        <div class="popup__item">
+                          <label class="checkbox">
+                            <input type="checkbox"><span>Выбрать</span>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#checkbox-usage"></use>
+                            </svg>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="popup__form">
+                        <div class="input">
+                          <select class="select" data-selectize="{&quot;allowEmptyOption&quot;: true}">
+                            <option value=""></option>
+                            <option value="1">Цифровая оценка кандидата</option>
+                            <option value="2">Оценка профессиональных компетенций</option>
+                            <option value="3">Оценка управленческих компетенций</option>
+                          </select>
+                          <label>Выбрать специализацию</label>
+                        </div>
+                        <div class="input">
+                          <select class="select">
+                            <option></option>
+                            <option>Цифровая оценка кандидата</option>
+                            <option>Оценка профессиональных компетенций</option>
+                            <option>Оценка управленческих компетенций</option>
+                          </select>
+                          <label>Выбрать специализацию</label>
+                        </div>
+                        <label class="checkbox">
+                          <input type="checkbox"><span>Выбрать специализацию</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#checkbox-usage"></use>
+                          </svg>
+                        </label>
+                        <div class="input">
+                          <input class="wpcf7-not-valid">
+                          <label>Вопрос</label>
+                        </div>
+                        <div class="input">
+                          <input>
+                          <label>ФИО*</label>
+                        </div>
+                        <div class="input">
+                          <input>
+                          <label>Телефон*</label>
+                        </div>
+                        <div class="input">
+                          <input>
+                          <label>Почта</label>
+                        </div>
+                        <button class="btn btn--block">Отправить</button>
+                      </div>
+                    </div>
+                    <div class="popup__tabs-body"></div>
+                  </div>
+                </div>
+                <div class="popup__wizard-footer">
+                  <button class="btn btn--outline" data-wizard-prev>Назад</button>
+                  <button class="btn" data-wizard-next>Дальше</button>
+                </div>
+              </div>
+              <div class="popup__wizard-body">
+                <div class="popup__wizard-footer">
+                  <button class="btn btn--outline" data-wizard-prev>Назад</button>
+                  <div class="popup__wizard-text">
+                    <div class="popup__note">Нажимая кнопку, я даю свое <a href="#">согласие на обработку персональных данных</a> и соглашаюсь с <a href="#">условиями политики конфиденциальности</a></div>
+                  </div>
+                  <button class="btn" data-wizard-next>Дальше</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup__note">Нажимая кнопку, я даю свое <a href="#">согласие на обработку персональных данных</a> и соглашаюсь с <a href="#">условиями политики конфиденциальности</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup micromodal-slide" id="iframe-popup" aria-hidden="true">
+      <div class="popup__overlay" tabindex="-1" data-micromodal-close>
+        <div class="popup__iframe"></div>
+      </div>
+    </div>
     <div class="hidden"></div>
     <script>(function ( w, dE ) {function u() {dE.style.setProperty('--scrollbar-width', w.innerWidth - dE.clientWidth + "px");}w.addEventListener('resize', u);u()})(window, document.documentElement)</script>
-  <script defer src="app.js"></script></body>
+  <script defer src="js/app.js"></script></body>
 </html>

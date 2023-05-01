@@ -1,2 +1,97 @@
-.popup
-  
++popup('callback-popup')
+  .popup__title Задать вопрос
+  .popup__wizard(style='--total: 2; --step: 1;')
+    .popup__supheader Опрос для организаций
+    .popup__wizard-heads
+      .popup__wizard-head.popup__wizard-head--active
+        .popup__header С какими проблемами вы столкнулись?
+      .popup__wizard-head
+        .popup__header Данные о вас и вашей компании
+    .popup__wizard-info
+      label #[span]/#[span]
+      .popup__wizard-progress
+
+    .popup__wizard-bodies
+      .popup__wizard-body.popup__wizard-body--active
+        .popup__tabs
+          .popup__tabs-heads
+            button.popup__tabs-head.popup__tabs-head--active Организация
+            button.popup__tabs-head Соискатель
+          .popup__tabs-bodies
+            .popup__tabs-body.popup__tabs-body--active
+              .popup__cols
+                .popup__item
+                  .input
+                    select.select(data-selectize='{"allowEmptyOption": true}')
+                      option(value='')
+                      option(value='1') Цифровая оценка кандидата
+                      option(value='2') Оценка профессиональных компетенций
+                      option(value='3') Оценка управленческих компетенций
+                    label Выбрать специализацию
+                .popup__item
+                  .input
+                    select.select
+                      option
+                      option Цифровая оценка кандидата
+                      option Оценка профессиональных компетенций
+                      option Оценка управленческих компетенций
+                    label Выбрать специализацию
+                .popup__item
+                  label.checkbox
+                    input(type='checkbox')
+                    span Выбрать специализацию
+                    +the_svg('checkbox')
+                .popup__item
+                  label.checkbox
+                    input(type='checkbox')
+                    span Выбрать
+                    +the_svg('checkbox')
+
+              .popup__form
+                .input
+                  select.select(data-selectize='{"allowEmptyOption": true}')
+                    option(value='')
+                    option(value='1') Цифровая оценка кандидата
+                    option(value='2') Оценка профессиональных компетенций
+                    option(value='3') Оценка управленческих компетенций
+                  label Выбрать специализацию
+                .input
+                  select.select
+                    option
+                    option Цифровая оценка кандидата
+                    option Оценка профессиональных компетенций
+                    option Оценка управленческих компетенций
+                  label Выбрать специализацию
+                label.checkbox
+                  input(type='checkbox')
+                  span Выбрать специализацию
+                  +the_svg('checkbox')
+                .input
+                  input.wpcf7-not-valid
+                  label Вопрос
+                .input
+                  input
+                  label ФИО*
+                .input
+                  input
+                  label Телефон*
+                .input
+                  input
+                  label Почта
+                button.btn.btn--block Отправить
+            .popup__tabs-body
+
+        .popup__wizard-footer
+          button.btn.btn--outline(data-wizard-prev) Назад
+          button.btn(data-wizard-next) Дальше
+
+      .popup__wizard-body
+        .popup__wizard-footer
+          button.btn.btn--outline(data-wizard-prev) Назад
+          .popup__wizard-text
+            .popup__note
+              | Нажимая кнопку, я даю свое #[a(href='#') согласие на обработку персональных данных] и соглашаюсь с #[a(href='#') условиями политики конфиденциальности]
+          button.btn(data-wizard-next) Дальше
+
+  .popup__note
+    | Нажимая кнопку, я даю свое #[a(href='#') согласие на обработку персональных данных] и соглашаюсь с #[a(href='#') условиями политики конфиденциальности]

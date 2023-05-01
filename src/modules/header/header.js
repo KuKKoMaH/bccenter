@@ -35,6 +35,7 @@ $('.header__search-button').on('click', () => {
 
 $('.header__search-suggests button').on('click', (e) => {
   $searchInput.val(e.target.innerText);
+  $searchInput.trigger('input');
   updateSearch();
 })
 

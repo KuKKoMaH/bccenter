@@ -1,27 +1,48 @@
 import MicroModal from 'micromodal';
 
+let player = null;
+let apiLoaded = false;
+
 const config = {
   disableScroll:       true,
   awaitCloseAnimation: true,
-  onShow:              ( modal, button, event ) => {
+  onShow:              (modal, button, event) => {
     if (!event) return;
     let $el = $(event.target);
     if (!$el.data('youtubeId')) $el = $el.parents('[data-youtube-id]');
     const youtubeId = $el.data('youtubeId');
     if (youtubeId) {
-      const iframe = `<iframe src="https://www.youtube.com/embed/${youtubeId}?autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>`;
-      $(modal).find('.popup__iframe').html(iframe);
+      const initPlayer = () => {
+        player = new YT.Player($(modal).find('.popup__iframe > *')[0], {
+          height:  '100%',
+          width:   '100%',
+          videoId: youtubeId,
+          events:  {
+            'onReady': () => player.playVideo(),
+          }
+        });
+      }
+
+      if (apiLoaded) {
+        initPlayer();
+      } else {
+        window.onYouTubeIframeAPIReady = () => {
+          apiLoaded = true;
+          initPlayer();
+        }
+        scriptLoader('https://www.youtube.com/iframe_api');
+      }
     }
   },
   onClose:             modal => {
-    $(modal).find('iframe').remove();
+    if (player) player.destroy();
   },
 };
 
 MicroModal.init(config);
 
-window.showModal = ( modalId ) => {
-  $('.modal.is-open').each(( i, el ) => {
+window.showModal = (modalId) => {
+  $('.popup.is-open').each((i, el) => {
     if (el.id === modalId) return;
     MicroModal.close(el.id);
   });

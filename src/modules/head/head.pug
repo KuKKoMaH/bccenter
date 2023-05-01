@@ -4,31 +4,34 @@
     .head__head
       h1.head__title Вакансии
       .head__aside
-        |Сортировать по:
+        | Сортировать по:
         select.select.select--outline()
           option соответствию
           option увеличению дохода
           option уменьшению дохода
 
     .head__filter
-      div
-        select.select.select--sm(placeholder='Тип занятости' data-selectize='{"allowEmptyOption": true,"plugins": ["clear_button"]}')
+      div.input(style='--background: #F8F8FA')
+        select.select.select--sm
           option
           option Полная
           option Частичная
           option Удаленная
           option Гибритный формат
-      div
-        select.select.select--sm(placeholder='Уровень дохода' data-selectize='{"allowEmptyOption": true,"plugins": ["clear_button"]}')
+        label Тип занятости
+      div.input
+        select.select.select--sm
           option
           option от 20 000 руб.
           option от 40 000 руб.
           option от 80 000 руб.
           option от 120 000 руб.
-      div
-        select.select.select--sm(placeholder='Опыт работы' data-selectize='{"allowEmptyOption": true,"plugins": ["clear_button"]}')
+        label Уровень дохода
+      div.input
+        select.select.select--sm
           option
           option Нет опыта
           option От 1 года до 3 лет
           option От 3 до 6 лет
           option Более 6 лет
+        label Опыт работы

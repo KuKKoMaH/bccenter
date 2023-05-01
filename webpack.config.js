@@ -20,7 +20,7 @@ module.exports = {
 
   entry:   path.resolve(src, 'index.js'),
   output:  {
-    filename: 'app.js',
+    filename: 'js/app.js',
     path:     dist,
     // clean:    true,
   },

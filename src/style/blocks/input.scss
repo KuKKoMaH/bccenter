@@ -1,83 +1,121 @@
-//.input {
-//  position: relative;
-//
-//  &__input {
-//    display: block;
-//    width: 100%;
-//    font-size: 16px;
-//    background: $white;
-//    border-right: 0;
-//    padding: 19px 24px 15px;
-//    border-radius: 36px;
-//    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.25);
-//    //box-shadow: inset 0px 5px 9px rgba(0, 0, 0, 0.25);
-//    border-bottom: 2px solid $white;
-//    @include anim();
-//
-//    &:hover, &:focus {
-//      box-shadow: none;
-//    }
-//
-//    &:focus {
-//      border-color: $red;
-//    }
-//
-//    &.wpcf7-not-valid {
-//      padding: 17px 20px 15px;
-//      border: 2px solid $red;
-//    }
-//  }
-//
-//  &:hover, &:focus-within {
-//    &:before {
-//      box-shadow: inset 0px 3px 9px rgba(0, 0, 0, 0.25);
-//
-//    }
-//  }
-//
-//  &:before {
-//    content: '';
-//    position: absolute;
-//    pointer-events: none;
-//    left: 0;
-//    top: 0;
-//    width: 100%;
-//    height: 100%;
-//    border-radius: 36px;
-//    @include anim();
-//  }
-//
-//
-//  //input, textarea {
-//  //  display: block;
-//  //  width: 100%;
-//  //  @include text2();
-//  //  color: $black;
-//  //  @include placeholder($dark-gray);
-//  //  padding-bottom: 18px;
-//  //  border-bottom: 1px solid $dark-gray;
-//  //  @include anim();
-//  //  @include mobile(){
-//  //    font-size: 16px;
-//  //    padding-bottom: 10px;
-//  //  }
-//  //
-//  //  &:hover, &:focus {
-//  //    border-color: $black;
-//  //  }
-//  //
-//  //  &.wpcf7-not-valid {
-//  //    border-color: $red;
-//  //    color: $red;
-//  //    @include placeholder($red);
-//  //  }
-//  //}
-//  //
-//  //textarea {
-//  //  height: 120px;
-//  //  min-width: 100%;
-//  //  max-width: 100%;
-//  //  resize: vertical;
-//  //}
-//
-//}
+@mixin active-input() {
+  ~ label {
+    @include label-medium();
+    top: -7px;
+    left: 23px;
+  }
+}
+
+.input {
+  position: relative;
+  @include title-medium();
+
+  &--active {
+    input {
+      @include active-input();
+    }
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    background: $white;
+    border: 1px solid $neutral300;
+    padding: 12px 27px;
+    border-radius: 12px;
+    @include anim();
+
+    &:hover, &:focus {
+      box-shadow: none;
+    }
+
+    &:focus {
+      //border-color: $red;
+    }
+
+    &.wpcf7-not-valid {
+      //padding: 17px 20px 15px;
+      //border: 2px solid $red;
+    }
+
+    &:hover {
+      border-color: $neutral400;
+    }
+
+    &:focus {
+      border-color: $secondary500;
+    }
+
+    &:-webkit-autofill {
+      @include active-input();
+    }
+
+    &:focus, {
+      @include active-input()
+    }
+
+    &.wpcf7-not-valid {
+      border-color: $primary;
+
+      ~ label {
+        color: $primary;
+      }
+    }
+  }
+
+  .dropdown-active ~ label {
+    @include active-input();
+  }
+
+  //&:hover, &:focus-within {
+  //  &:before {
+  //    box-shadow: inset 0px 3px 9px rgba(0, 0, 0, 0.25);
+  //
+  //  }
+  //}
+
+  label {
+    position: absolute;
+    color: $secondary500;
+    left: 27px;
+    top: 13px;
+    pointer-events: none;
+    padding: 0 4px;
+    @include anim();
+    background: var(--background, $white);
+    z-index: 1;
+  }
+
+  //input, textarea {
+  //  display: block;
+  //  width: 100%;
+  //  @include text2();
+  //  color: $black;
+  //  @include placeholder($dark-gray);
+  //  padding-bottom: 18px;
+  //  border-bottom: 1px solid $dark-gray;
+  //  @include anim();
+  //  @include mobile(){
+  //    font-size: 16px;
+  //    padding-bottom: 10px;
+  //  }
+  //
+  //  &:hover, &:focus {
+  //    border-color: $black;
+  //  }
+  //
+  //  &.wpcf7-not-valid {
+  //    border-color: $red;
+  //    color: $red;
+  //    @include placeholder($red);
+  //  }
+  //}
+  //
+  //textarea {
+  //  height: 120px;
+  //  min-width: 100%;
+  //  max-width: 100%;
+  //  resize: vertical;
+  //}
+
+}

@@ -42,11 +42,12 @@
     @include elevation-02();
     --card-background: var(--background, transparent);
     background: radial-gradient(96.13% 105.4% at 0% 0%, #F8F8FA 0%, rgba(248, 248, 250, 0) 100%), var(--card-background), #F8F8FA;
+    background-size: cover;
+    background-position: 50% 50%;
     @include mobile() {
       height: auto;
       margin-top: 10px;
       padding: 24px;
-      background: radial-gradient(96.13% 105.4% at 0% 0%, #F8F8FA 0%, rgba(248, 248, 250, 0) 100%), var(--card-background), #F8F8FA;
 
       #{$this}__text {
         @include headline-medium();

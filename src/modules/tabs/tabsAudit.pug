@@ -3,9 +3,9 @@
     .block__head
       .block__title Примеры отчётов по аудиту
 
-    .tabs__heads.tabs__heads--centered
-      button.tabs__head.tabs__head--active ФУНКЦИОНАЛЬНЫЙ АУДИТ
-      button.tabs__head ОРГАНИЗАЦИОННЫЙ АУДИТ
+    .tabs__heads
+      button.tabs__head.tabs__head--active: span ФУНКЦИОНАЛЬНЫЙ АУДИТ
+      button.tabs__head: span ОРГАНИЗАЦИОННЫЙ АУДИТ
     .tabs__bodies
       .tabs__body.tabs__body--active
         .tabs__image: img(src='https://placehold.jp/900x500.png')
@@ -14,10 +14,27 @@
 
 .tabs.block.block--gray
   .c
-    .tabs__heads.tabs__heads--centered
-      button.tabs__head.tabs__head--active ОЦЕНКА ИНДЕКСА ПОТРЕБИТЕЛЬСКОЙ ЛОЯЛЬНОСТИ NPS
-      button.tabs__head ОЦЕНКА ПРОЕКТНОЙ#[br]ДЕЯТЕЛЬНОСТИ
+    .tabs__heads
+      button.tabs__head.tabs__head--active: span ОЦЕНКА ИНДЕКСА ПОТРЕБИТЕЛЬСКОЙ ЛОЯЛЬНОСТИ NPS
+      button.tabs__head: span ОЦЕНКА ПРОЕКТНОЙ#[br]ДЕЯТЕЛЬНОСТИ
     .tabs__bodies
+      .tabs__body.tabs__body--active
+        .tabs__image: img(src='https://placehold.jp/900x500.png')
+      .tabs__body
+        .tabs__image: img(src='https://placehold.jp/900x500.png')
+
+.tabs.block.block--gray
+  .c
+    .tabs__heads.tabs__heads--2col
+      button.tabs__head.tabs__head--active: span Оценка профессиональных компетенций
+      button.tabs__head: span Оценка личностных компетенций
+      button.tabs__head: span Оценка управленческих компетенций
+      button.tabs__head: span Оценка потенциала
+    .tabs__bodies
+      .tabs__body.tabs__body--active
+        .tabs__image: img(src='https://placehold.jp/900x500.png')
+      .tabs__body
+        .tabs__image: img(src='https://placehold.jp/900x500.png')
       .tabs__body.tabs__body--active
         .tabs__image: img(src='https://placehold.jp/900x500.png')
       .tabs__body
