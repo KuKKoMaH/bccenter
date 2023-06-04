@@ -260,11 +260,30 @@
       [data-wizard-next] {
         margin-left: auto;
       }
+
+      @include mobile() {
+        flex-wrap: wrap;
+        [data-wizard-prev] {
+          order: 2;
+          width: calc(50% - 5px);
+          margin-right: 10px;
+
+        }
+        [data-wizard-submit], [data-wizard-next] {
+          order: 3;
+          width: calc(50% - 5px);
+        }
+      }
     }
 
     &-text {
       margin: 0 auto;
       padding: 0 35px;
+      @include mobile() {
+        padding: 0;
+        margin-bottom: 16px;
+        width: 100%;
+      }
 
       #{$this}__note {
         margin: 0;
@@ -328,6 +347,12 @@
     > * {
       height: 100%;
     }
+  }
+
+  &__group {
+    @include body-small();
+    margin: 16px 0;
+    color: $neutral700;
   }
 }
 

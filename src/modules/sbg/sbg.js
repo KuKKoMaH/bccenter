@@ -4,15 +4,12 @@ const $sbg = $('.sbg');
 if ($sbg.length) {
   const img = $sbg.find('img')[0];
 
-  const init = () => {
+  const virtualImg = new Image();
+  virtualImg.onload = () => {
     const container = $sbg.find('.sbg__img')[0]
     const links = $sbg.find('.sbg__links')[0];
-    initResponsiveImage([img.naturalWidth, img.naturalHeight], container, links);
+    initResponsiveImage([virtualImg.naturalWidth, virtualImg.naturalHeight], container, links);
+    $sbg.find('.sbg__img').addClass('sbg__img--init');
   }
-
-  if (img.naturalWidth) {
-    init();
-  } else {
-    img.addEventListener('load', init)
-  }
+  virtualImg.src = img.src;
 }

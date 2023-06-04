@@ -20,6 +20,7 @@ import "./style/blocks/radio.scss";
 import "./style/blocks/select.scss";
 import "./style/blocks/wpcf7.scss";
 import "./style/blocks/form.scss";
+import "./style/blocks/simplebar.scss";
 
 import './modules/header/header.scss';
 import './modules/footer/footer.scss';

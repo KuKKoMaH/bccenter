@@ -21,6 +21,17 @@
         @include elevation-01();
       }
     }
+
+    &--scrollable {
+      @include mobile() {
+        @include full-width();
+
+        img {
+          max-width: none;
+          padding: 0 calc(max(100vw - #{$container-sm}, 0px) / 2 + 16px)
+        }
+      }
+    }
   }
 
   &__background {

@@ -48,7 +48,7 @@
 @mixin full-width() {
   position: relative;
   width: 100vw;
-  width: calc(100vw - var(--scrollbar-width));
+  width: calc(100vw - var(--scrollbar-width) + 1px);
   left: 50%;
   transform: translateX(-50%);
 }

@@ -78,6 +78,11 @@
                 .input
                   input
                   label Почта
+                .file
+                  input(type='file')
+                  +the_svg('file')
+                  .file__name Прикрепить резюме
+                  .file__note Формат .docx, .pdf, .jpg, .png
                 button.btn.btn--block Отправить
             .popup__tabs-body
 

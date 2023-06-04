@@ -6,6 +6,9 @@ import './initPopups';
 import "src/js/initGallery";
 import initGallery from "src/js/initGallery";
 
+import 'simplebar'; // or "import SimpleBar from 'simplebar';" if you want to use it manually.
+import 'simplebar/dist/simplebar.css';
+
 const $share = $('.share');
 if ($share.length) {
   scriptLoader('https://yastatic.net/share2/share.js', () => {

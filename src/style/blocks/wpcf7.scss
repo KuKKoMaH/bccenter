@@ -12,7 +12,22 @@
 }
 
 
-.invalid, .unaccepted {
+.submitting {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .5);
+    z-index: 1;
+  }
+}
+
+.invalid, .unaccepted, .failed {
   .wpcf7-not-valid-tip {
     display: block;
     font-size: 12px;

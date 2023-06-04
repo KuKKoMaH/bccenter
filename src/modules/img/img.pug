@@ -2,6 +2,11 @@
   .block__head
     .block__title Цифровой профиль и оценка кандидата
   .img__container
-    .img__background: img(src=require('src/modules/img/img/bg_2.svg'))
-    .img__image: img(src='https://placehold.jp/1800x600.png')
+    .img__background
+      picture
+        img(src=require('src/modules/img/img/bg_2.svg'))
+    .img__image
+      picture
+        img(src='https://placehold.jp/1800x600.png')
+    //.img__image.img__image--scrollable(data-simplebar data-simplebar-auto-hide="false"): img(src='https://placehold.jp/1800x600.png')
   //.img__image.img__image--background: img(src='https://placehold.jp/1800x600.png')

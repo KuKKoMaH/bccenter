@@ -7,7 +7,7 @@
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
     <!--link(rel="stylesheet" media="all" href="style.css")-->
     <!--link(rel="shortcut icon" href="/favicon.ico")-->
-  <link href="style.css?1682844859843" rel="stylesheet"></head>
+  <link href="style.css?1685046385261" rel="stylesheet"></head>
   <body onunload="">
     <!--include ../modules/header/header-->
     <div class="header">
@@ -1080,7 +1080,7 @@
               </svg></a>
           </div>
           <div class="sbg__img">
-            <div class="sbg__links"><a class="sbg__link" href="#"><span>Корпоративная культура<br>HR-бренд</span></a><a class="sbg__link" href="#"><span>Управление талантами</span></a><a class="sbg__link" href="#"><span>Оценка эффективности<br>и потенциала</span></a><a class="sbg__link" href="#"><span>Управление мотивацией<br>и эффективностью</span></a><a class="sbg__link" href="#"><span>Обучение и развитие</span></a><a class="sbg__link" href="#"><span>Аудит HR-процессов</span></a><a class="sbg__link" href="#"><span>Формирование<br>HR-cтратегии</span></a><a class="sbg__link" href="#"><span>Организационный<br>менеджмент</span></a><a class="sbg__link" href="#"><span>Подбор</span></a><a class="sbg__link" href="#"><span>Адаптация</span></a></div><img src="img/img_sbg.svg">
+            <div class="sbg__links"><a class="sbg__link" href="#"><span>Корпоративная культура<br>HR-бренд</span></a><a class="sbg__link" href="#"><span>Управление талантами</span></a><a class="sbg__link" href="#"><span>Оценка эффективности<br>и потенциала</span></a><a class="sbg__link" href="#"><span>Управление мотивацией<br>и эффективностью</span></a><a class="sbg__link" href="#"><span>Обучение и развитие</span></a><a class="sbg__link" href="#"><span>Аудит HR-процессов</span></a><a class="sbg__link" href="#"><span>Формирование<br>HR-cтратегии</span></a><a class="sbg__link" href="#"><span>Организационный<br>менеджмент</span></a><a class="sbg__link" href="#"><span>Подбор</span></a><a class="sbg__link" href="#"><span>Адаптация</span></a></div><img src="img/img_sbg.svg" width="900" height="540">
           </div>
         </div>
       </div>
@@ -1371,8 +1371,13 @@
           <div class="block__title">Цифровой профиль и оценка кандидата</div>
         </div>
         <div class="img__container">
-          <div class="img__background"><img src="img/modules_img_img_bg_2.svg"></div>
-          <div class="img__image"><img src="https://placehold.jp/1800x600.png"></div>
+          <div class="img__background">
+            <picture><img src="img/modules_img_img_bg_2.svg"></picture>
+          </div>
+          <div class="img__image">
+            <picture><img src="https://placehold.jp/1800x600.png"></picture>
+          </div>
+          <!--.img__image.img__image--scrollable(data-simplebar data-simplebar-auto-hide="false"): img(src='https://placehold.jp/1800x600.png')-->
         </div>
         <!--.img__image.img__image--background: img(src='https://placehold.jp/1800x600.png')-->
       </div>
@@ -1556,6 +1561,14 @@
                         <div class="input">
                           <input>
                           <label>Почта</label>
+                        </div>
+                        <div class="file">
+                          <input type="file">
+                          <svg>
+                            <use xlink:href="img/sprite.svg#file-usage"></use>
+                          </svg>
+                          <div class="file__name">Прикрепить резюме</div>
+                          <div class="file__note">Формат .docx, .pdf, .jpg, .png</div>
                         </div>
                         <button class="btn btn--block">Отправить</button>
                       </div>

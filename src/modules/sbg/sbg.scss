@@ -29,9 +29,17 @@
       max-width: 100%;
       height: auto;
     }
+
+
+    &--init {
+      #{$this}__links {
+        display: block;
+      }
+    }
   }
 
   &__links {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;

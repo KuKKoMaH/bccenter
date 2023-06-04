@@ -23,6 +23,7 @@
     "nouislider": "^15.5.0",
     "photoswipe": "^5.3.7",
     "postcss-easysprites": "^1.1.0",
+    "simplebar": "^6.2.5",
     "swiper": "^7.4.1",
     "tom-select": "^2.2.2",
     "webpack-spritesmith": "^1.1.0"
